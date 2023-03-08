@@ -1,0 +1,27 @@
+{
+  "name": "sneakz_store_website",
+  "version": "1.0.0",
+  "description": "Intro About the project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmedd-osama/Sneakz_Store_Website.git"
+  },
+  "keywords": [
+    "Online",
+    "Store",
+    "Sneakers"
+  ],
+  "author": "https://github.com/ahmedd-osama",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahmedd-osama/Sneakz_Store_Website/issues"
+  },
+  "homepage": "https://github.com/ahmedd-osama/Sneakz_Store_Website#readme",
+  "dependencies": {
+    "aos": "^2.3.4"
+  }
+}

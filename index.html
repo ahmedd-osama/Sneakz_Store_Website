@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneakz</title>
+    <link rel="shortcut icon" href="images/logo/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/fontawesome/all.min.css">
+    <link rel="stylesheet" href="css/normalize/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Nunito:wght@200;300;400;500;600;700;800;900;1000&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body >
+  <main>
+  <header>
+    <nav class="">
+      <div class="bg-glass"></div>
+      <div class="wrapper position-relative ">
+          <div class="bar">
+            <div class="logo">
+              <img src="images/logo/logo.png" alt="">
+              <p class="brand-text">SNEAKZ</p>
+            </div>
+            <ul>
+              <li class="nav-item">
+                <a href="#" onclick="document.querySelector('header nav').classList.toggle('expanded')">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" onclick="document.querySelector('header nav').classList.toggle('expanded')">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" onclick="document.querySelector('header nav').classList.toggle('expanded')">Store</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" onclick="document.querySelector('header nav').classList.toggle('expanded')">Contact</a>
+              </li>
+              <li class="nav-btn ms-lg-auto">
+                <a href="join.html" class="btn-action" onclick="document.querySelector('header nav').classList.toggle('expanded')">Join</a>
+              </li>
+              <li class="nav-btn">
+                <a href="login.html" class="btn-main" >Log in <i class="fa-solid fa-right-to-bracket"></i> </a>
+              </li >
+              <li class="nav-btn">
+                <a onclick="document.body.toggleAttribute('dark-theme')" class="theme-btn" ><i class="fa-solid fa-circle-half-stroke me-2"></i><span class="d-lg-none" style="font-size: 1.25rem">Change Color Theme</span></a>
+              </li >
+            </ul>
+            <div class="actions">
+              <div class="position-relative">
+                <span class="position-absolute  start-100 translate-middle badge rounded-pill bg-danger">
+                  4
+                  <span class="visually-hidden">unread messages</span>
+                  </span>
+                <a href="cart.html" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+              </div>
+            </div>
+            <button class="menu-icon d-lg-none" onclick="document.querySelector('header nav').classList.toggle('expanded')"> <i class="fa-solid fa-bars i.close burger-icon"></i> <i class="fa-solid fa-x close-icon"></i></button>
+          </div>
+      </div>
+    </nav>
+  </header>
+  <div class="landing section" id="landing">
+    <!-- <div class="bg">
+      <svg id="visual" viewBox="0 0 900 900" width="900" height="900" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+        <defs>
+          <linearGradient id="grad1_0" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="30%" stop-color="transparent" stop-opacity="1"></stop><stop offset="70%" stop-color="transparent" stop-opacity="1"></stop></linearGradient>
+        </defs>
+        <defs>
+          <linearGradient id="grad2_0" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="30%" stop-color="#ffffff" stop-opacity="1"></stop><stop offset="70%" stop-color="#ffffff" stop-opacity="1"></stop></linearGradient>
+        </defs>
+        <g id="first">
+          <path d="M0 572.8C-49.9 506.7 -99.8 440.6 -175.3 423.1C-250.7 405.7 -351.7 436.8 -405 405C-458.3 373.2 -464.1 278.5 -484.1 200.5C-504.1 122.5 -538.4 61.3 -572.8 0L0 0Z" fill="var(--dark-color)">
+          </path>
+        </g>
+        <g id="second">
+          <path d="M0 -572.8C70 -540.1 140.1 -507.4 194 -468.4C248 -429.4 285.9 -384.2 345.8 -345.8C405.7 -307.3 487.7 -275.7 529.2 -219.2C570.7 -162.7 571.7 -81.3 572.8 0L0 0Z" fill="var(--dark-color)">
+          </path>
+        </g>
+      </svg>
+    </div> -->
+    <div class="container position-relative">
+      <div class="row">
+        <div class="col-md-5 landing-text">
+          <h1>Buy The Best Sneakers with <span class="brand-text">Sneakz</span></h1>
+          <p class="sub-text">Trusted by over 2000 custormers.</p>
+          <a href="#store" class="btn-main my-2">Shop Now</a>
+        </div>
+        <div class="col-md-7 sneaker-swiper">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="about section" id="about">
+    <div class="devider-light-up d-dark-none"></div>
+    <div class="devider-dark-up d-none d-dark-block"></div>
+  </div>
+  </main>
+</body>
+  <script src="scripts/dist/bootstrap.bundle.min.js"></script>
+  <script src="scripts/dist/all.min.js"></script>
+  <script src="scripts/dist/app.js"></script>
+</html>
