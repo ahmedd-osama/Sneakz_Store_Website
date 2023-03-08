@@ -157,9 +157,6 @@ body[dark-theme] .d-dark-block {
   position: relative;
   padding: 3rem 0;
 }
-.section .container {
-  height: 100%;
-}
 
 .brand-text {
   font-weight: 900;
@@ -345,7 +342,7 @@ nav.expanded .bar ul a {
 }
 
 .landing {
-  height: 85vh;
+  min-height: 100vh;
   background-size: cover;
   background-image: url(../svg/blob.svg);
   background-position: 0% 30%;
@@ -365,8 +362,11 @@ nav.expanded .bar ul a {
 .landing .bg svg #first {
   transform: translate(100%, -100%);
 }
+.landing .container {
+  min-height: 80vh;
+}
 .landing .row {
-  height: 100%;
+  height: 80vh;
 }
 .landing .landing-text {
   height: 100%;
@@ -386,7 +386,7 @@ nav.expanded .bar ul a {
 }
 .landing .landing-text p {
   font-size: 1.125rem;
-  font-weight: 500;
+  font-weight: 700;
 }
 .landing .landing-text .btn-main {
   border: 2px solid var(--light-color);
@@ -396,5 +396,100 @@ nav.expanded .bar ul a {
     height: -moz-fit-content;
     height: fit-content;
     margin-top: 6rem;
+  }
+}
+.landing .sneaker-swiper {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .landing .sneaker-swiper {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+.landing .sneaker-swiper .swiper {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.landing .sneaker-swiper .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  height: 100%;
+  width: 100%;
+}
+.landing .sneaker-swiper .swiper-slide #first-img {
+  max-width: 90%;
+  transform: scale(1.5);
+}
+@media (max-width: 992px) {
+  .landing .sneaker-swiper .swiper-slide #first-img {
+    transform: scale(2);
+  }
+}
+@media (max-width: 768px) {
+  .landing .sneaker-swiper .swiper-slide #first-img {
+    max-width: 70%;
+    transform: scale(1.4);
+  }
+}
+.landing .sneaker-swiper .swiper-slide #second-img {
+  max-width: 50%;
+  transform: scale(1.5) rotate(303deg);
+}
+@media (max-width: 992px) {
+  .landing .sneaker-swiper .swiper-slide #second-img {
+    max-width: 50%;
+    transform: scale(2) rotate(303deg) translate(-10%, -16%);
+  }
+}
+@media (max-width: 768px) {
+  .landing .sneaker-swiper .swiper-slide #second-img {
+    max-width: 50%;
+    transform: scale(1.1) rotate(303deg) translate(-10%, 9%);
+  }
+}
+.landing .sneaker-swiper .swiper-slide #third-img {
+  max-width: 90%;
+  transform: scale(1.5) rotate(320deg) translateY(-5%);
+}
+@media (max-width: 992px) {
+  .landing .sneaker-swiper .swiper-slide #third-img {
+    max-width: 50%;
+    transform: scale(2.8) rotate(320deg) translate(2%, -4%);
+  }
+}
+@media (max-width: 768px) {
+  .landing .sneaker-swiper .swiper-slide #third-img {
+    max-width: 70%;
+    transform: scale(1.3) rotate(320deg) translate(3%, -11%);
+  }
+}
+.landing .sneaker-swiper .swiper-slide #fourth-img {
+  max-width: 90%;
+  transform: scale(1.5) rotate(310deg) translateY(-5%);
+}
+@media (max-width: 992px) {
+  .landing .sneaker-swiper .swiper-slide #fourth-img {
+    max-width: 50%;
+    transform: scale(3.5) rotate(310deg) translate(2%, -4%);
+  }
+}
+@media (max-width: 768px) {
+  .landing .sneaker-swiper .swiper-slide #fourth-img {
+    max-width: 70%;
+    transform: scale(1.3) rotate(310deg) translate(-9%, 2%);
   }
 }/*# sourceMappingURL=main.css.map */
