@@ -345,9 +345,10 @@ nav.expanded .bar ul a {
 }
 
 .landing {
-  height: 80vh;
+  height: 85vh;
   background-size: cover;
   background-image: url(../svg/blob.svg);
+  background-position: 0% 30%;
 }
 .landing .bg {
   position: absolute;

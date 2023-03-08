@@ -361,9 +361,10 @@ nav{
 }
 // --------------- Landing Section
 .landing{
-  height: 80vh;
+  height: 85vh;
   background-size: cover;
   background-image: url(../svg/blob.svg);
+  background-position: 0% 30%;
   .bg{
     position: absolute;
     width: 100%;
