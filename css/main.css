@@ -647,9 +647,6 @@ footer {
   background-color: var(--light-color-alt);
   color: var(--text-black-white);
 }
-footer a {
-  color: white;
-}
 footer .info {
   margin-bottom: 20px;
 }
@@ -661,7 +658,7 @@ footer .info a {
 }
 footer .info p {
   margin-bottom: 20px;
-  color: rgba(255, 255, 255, 0.8);
+  color: #808080;
 }
 footer .info .socials {
   font-size: 1.6rem;
@@ -708,7 +705,7 @@ footer .links ul li {
 }
 footer .links ul a {
   text-transform: none;
-  color: white;
+  color: var(--text-black-white);
 }
 footer .contact {
   flex-grow: 1;
@@ -725,7 +722,7 @@ footer .link {
   text-align: center;
 }
 footer .link a {
-  color: white;
+  color: var(--text-black-white);
   font-size: 1.2rem;
   text-transform: none;
 }/*# sourceMappingURL=main.css.map */

@@ -652,9 +652,7 @@ footer{
   overflow: hidden;
   background-color: $light-color-alt;
   color: $text-color;
-  a{
-    color: white;
-  }
+
   .info{
     margin-bottom: 20px;
     a{
@@ -665,7 +663,7 @@ footer{
     }
     p{
       margin-bottom: 20px;
-      color: rgba(white, $alpha: .80);
+      color: $text-grey;
     }
     .socials{
       svg{
@@ -709,7 +707,7 @@ footer{
       }
       a{
         text-transform: none;
-        color: white;
+        color: $text-color;
       }
     }
   }
@@ -727,7 +725,7 @@ footer{
   .link{
     text-align: center;
     a{
-      color: white;
+      color: $text-color;
       font-size: 1.2rem;
       text-transform: none;
     }
