@@ -13,3 +13,14 @@ const swiper = new Swiper('.sneaker-swiper .swiper', {
     },
     effect: "flip",
 });
+/*
+   packages initialization
+*/
+// pureCounter
+new PureCounter({
+    selector: '.purecounter',
+    once: true,
+    repeat: false,
+});
+// Animate On Scroll
+AOS.init();

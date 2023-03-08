@@ -4,7 +4,9 @@ html{
 :root{
   --main-color: #F0A04B;
   --light-color: #FAF8F1;
+  --light-color-alt: #e1dfd9;
   --dark-color: #03001C;
+  --dark-color-alt: #1c1a33;
   --action-color: #2FA4FF;
   --text-black: black;
   --text-black-white: black;
@@ -66,7 +68,9 @@ body{
 /* Variables*/
 body[dark-theme]{
   --light-color: #03001C ;
+  --light-color-alt: #1c1a33 ;
   --dark-color: #FAF8F1;
+  --dark-color-alt: #e1dfd9;
   --text-black-white: white;
   --text-white-black: black;
   --white-black-color: black;
@@ -76,7 +80,9 @@ body[dark-theme]{
 }
 $main-color: var(--main-color);
 $light-color: var(--light-color);
+$light-color-alt: var(--light-color-alt);
 $dark-color: var(--dark-color);
+$dark-colo-altr: var(--dark-color-alt);
 $action-color: var(--action-color);
 $white-black-color: var(--white-black-color);
 $black-white-color: var(--black-white-color);
@@ -126,9 +132,19 @@ body[dark-theme] .d-dark-block{
   bottom: 0;
   transform: translateY(-98%);
 }
+.devider-light-down{
+  @extend .devider-light-up;
+  background-image: url(../svg/wave-light-down.svg);
+  transform: translateY(-1%)
+}
 .devider-dark-up{
   @extend .devider-light-up;
   background-image: url("../svg/wave-dark-up.svg");
+}
+.devider-dark-down{
+  @extend .devider-dark-up;
+  background-image: url(../svg/wave-dark-down.svg);
+  transform: translateY(-1%);
 }
 // buttons
   .btn-action{
@@ -173,7 +189,37 @@ body[dark-theme] .d-dark-block{
 .section{
   position: relative;
   padding: 3rem 0;
+  .section-title{
+    text-align: center;
+    h2{
+      position: relative;
+      font-weight: 800;
+      text-transform: capitalize;
+      width: fit-content;
+      margin: 0 auto;
+      font-size: 2.5rem;
+      &::before, &::after{
+        content:'';
+        position: absolute;
+        width: 0.7rem;
+        height: 0.7rem;
+        background-color: transparent;
+        border: 3px solid $dark-color;
+        border-radius: 0.1rem;
+        top: 50%;
+        left: -1rem;
+        transform: translate(-50%, -50%);
+      }
+      &::after{
+        left: calc(100% + 1rem);
+      }
+    }
+    p{
+      font-weight: 500;
+    }
+  }
 }
+
 // text
 .brand-text{
   font-weight: 900;
@@ -186,6 +232,7 @@ body[dark-theme] .d-dark-block{
 .sub-text{
   color: $text-grey;
 }
+
 /* Custom Anchore Tags */
 a.custom-anchor{
   text-decoration: none;
@@ -203,6 +250,8 @@ a.custom-anchor::after{
   left: 0;
   border-radius: 2px;
 }
+
+
 
 /*
 ---------------Navigation bar
@@ -362,6 +411,7 @@ nav{
   background-size: cover;
   background-image: url(../svg/blob.svg);
   background-position: 0% 30%;
+  overflow: hidden;
   .bg{
     position: absolute;
     width: 100%;
@@ -496,3 +546,190 @@ nav{
       }
     }
   }
+// --------------- about Section
+.about{
+  overflow: hidden;
+  .container{
+    margin-bottom: 5rem;
+  }
+  .row{
+    display: flex;
+    align-items:center;
+    margin-top: 2rem;
+  }
+  .video-container{
+    aspect-ratio: 16/9;
+    iframe{
+      aspect-ratio: 16/9;
+    }
+  }
+  .info p{
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+  .image{
+    background-image: url("../images/about/demo.png");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    aspect-ratio: 1/1;
+  }
+  .tiles{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .tile{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 35%;
+      margin: 1rem;
+      aspect-ratio: 1/1;
+      background-color: $light-color-alt;
+      border-radius: 20px;
+      color: $main-color;
+      font-size: 5rem;
+      padding: 0.5rem;
+      svg{
+        margin-bottom: 0.5rem;
+      }
+      p{
+        font-size: 1rem;
+        color: white;
+        text-align: center;
+        font-weight: 500;
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+// --------------- Store Section
+.store{
+  background-color: $light-color-alt;
+  .section-title{
+    margin-top: 4rem;
+  }
+  .status{
+    left: 50%;
+    top: 0;
+    z-index: 20;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background-color: #1c1a33;
+    border: 2px solid white;
+    border-radius: 1rem;
+    min-width: 90%;
+    max-width: 90%;
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    .stat{
+      flex-grow: 1;
+      padding: 0.5rem;
+      margin: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      span{
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: white;
+      }
+      p{
+        // word-break:break-all;
+        text-align: center;
+      }
+    }
+  }
+}
+footer{
+  position: relative;
+  overflow: hidden;
+  background-color: $light-color-alt;
+  color: $text-color;
+  a{
+    color: white;
+  }
+  .info{
+    margin-bottom: 20px;
+    a{
+      display:block;
+      font-size: 2rem;
+      font-family: 'Pacifico', cursive;
+      margin-bottom: 20px;
+    }
+    p{
+      margin-bottom: 20px;
+      color: rgba(white, $alpha: .80);
+    }
+    .socials{
+      svg{
+        cursor: pointer
+      }
+      font-size: 1.6rem;
+      .fa-facebook:hover{
+      color: var(--facebook-blue)
+      }
+      .fa-twitter:hover{
+        color: var(--twitter-blue)
+      }
+      .fa-instagram:hover{
+        color: var(--instagram-red)
+      }
+      .fa-linkedin:hover{
+        color: var(--linkedin-blue)
+      }
+      @media (#{$max-width-medium}){
+        justify-content: space-around;
+      }
+    }
+  }
+  .wraper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .links{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    ul{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0;
+      li{
+      padding: 10px;
+      }
+      a{
+        text-transform: none;
+        color: white;
+      }
+    }
+  }
+  .contact{
+    flex-grow: 1;
+    background-color: transparent;
+    h4{
+      margin-bottom: 10px;
+    }
+  }
+  .copyright{
+    margin: 30px auto 5px;
+    text-align: center;
+  }
+  .link{
+    text-align: center;
+    a{
+      color: white;
+      font-size: 1.2rem;
+      text-transform: none;
+    }
+  }
+}
