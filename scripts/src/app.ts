@@ -25,6 +25,31 @@ const swiper = new Swiper('.sneaker-swiper .swiper', {
   effect: "flip",
 });
 
+/*
+contact form
+*/
+let contactForm: any = document.querySelector(".contact form");
+const handleSubmit: any = (event: any) => {
+  event.preventDefault();
+
+  const myForm = event.target;
+  const formData: any = new FormData(myForm);
+  
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString(),
+  })
+    .then(() => {
+      contactForm.innerHTML = `
+    <h3 style="text-align: center;">Your message was sent succesfully</h3>
+    `
+    })
+    .catch((error) => alert(error));
+};
+
+contactForm.addEventListener("submit", handleSubmit);
+
 
 
 
