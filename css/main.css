@@ -234,6 +234,20 @@ a.custom-anchor::after {
   border-radius: 2px;
 }
 
+/* input stylling */
+input, textarea {
+  padding: 0.5rem;
+  background-color: var(--light-color-alt);
+  border: none;
+  border-radius: 0.4em;
+  border: 1.5px solid transparent;
+  color: var(--black-white-color);
+}
+input:focus, textarea:focus {
+  border-color: var(--main-color);
+  outline: none;
+}
+
 /*
 ---------------Navigation bar
 */
@@ -643,6 +657,25 @@ nav.expanded .bar ul a {
 
 .contact {
   background-color: var(--light-color);
+  overflow-x: hidden;
+}
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  gap: 0.8rem;
+  padding: 1rem;
+}
+.contact .location {
+  display: flex;
+  align-items: center;
+}
+.contact .location .map-container {
+  aspect-ratio: 1/1;
+  width: 100%;
+  background-color: var(--light-color-alt);
+  overflow: hidden;
+  border-radius: 0.5rem;
 }
 
 footer {

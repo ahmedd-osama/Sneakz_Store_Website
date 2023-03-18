@@ -156,18 +156,32 @@
       </div>
   </div>
   <div class="contact section">
-        <div class="divider-light-up d-dark-none"></div>
+    <div class="divider-light-up d-dark-none"></div>
     <div class="divider-dark-up d-none d-dark-block"></div>
     <div class="section-title" data-aos="fade-up" data-aos-duration="500">
       <h2>Contact</h2>
       <p class="sub-text">Feel free to contact us at any time</p>
     </div>
     <div class="container">
-
+      <div class="row">
+        <form class="col-md-6 contact-form hidden-below" id="contact-form" method="post" action="modules/form/contact-form.php" data-aos="fade-right" data-aos-duration="500">
+          <h3>Send us a message</h3>
+          <input type="text" placeholder="Name" required name="name">
+          <input type="email" placeholder="Email" required name="email">
+          <textarea name="message" id="messageText" cols="30" rows="10" placeholder="Message" required name="message"></textarea>
+          <button  type= "submin" id ="contactSend" class="btn-main"> Send</button>
+        </form>
+        <div class="col-md-6 location" data-aos="fade-left" data-aos-duration="500">
+          <div class="map-container">
+            <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110502.60389469573!2d31.328505582537677!3d30.059618471032618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583fa60b21beeb%3A0x79dfb296e8423bba!2z2KfZhNmC2KfZh9ix2KnYjCDZhdit2KfZgdi42Kkg2KfZhNmC2KfZh9ix2KnigKw!5e0!3m2!1sar!2seg!4v1679170257063!5m2!1sar!2seg" style="border:0;" width="100%" height="100%" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+            <button class="btn-action w-100 mt-auto">Go to location</button>
+          </div>
+        </div>
+      </div>
 
     </div>
   </div>
-  <footer class = "footer py-5">
+  <footer class = "footer py-5 ">
     <div class="divider-light-down d-dark-none"></div>
     <div class="divider-dark-down d-none d-dark-block"></div>
     <div class="container">
