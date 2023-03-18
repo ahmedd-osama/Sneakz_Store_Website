@@ -42,7 +42,7 @@ const handleSubmit: any = (event: any) => {
   })
     .then(() => {
       contactForm.innerHTML = `
-    <h3 style="text-align: center;">Your message was sent succesfully</h3>
+    <h3 style="text-align: center; margin: auto; ">Your message was sent succesfully</h3>
     `
     })
     .catch((error) => alert(error));
