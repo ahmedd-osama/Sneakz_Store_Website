@@ -95,7 +95,7 @@ body[dark-theme] .d-dark-block {
   display: block !important;
 }
 
-.devider-light-up, .devider-dark-up, .devider-dark-down, .devider-light-down, .devider-main {
+.divider-light-up, .divider-dark-up, .divider-dark-down, .divider-light-down, .divider-main {
   z-index: 10;
   position: absolute;
   top: 0;
@@ -104,26 +104,26 @@ body[dark-theme] .d-dark-block {
   background-size: cover;
 }
 
-.devider-main {
+.divider-main {
   background-image: url("../svg/wave-main.svg");
 }
 
-.devider-light-up, .devider-dark-up, .devider-dark-down, .devider-light-down {
+.divider-light-up, .divider-dark-up, .divider-dark-down, .divider-light-down {
   background-image: url("../svg/wave-light-up.svg");
   bottom: 0;
   transform: translateY(-98%);
 }
 
-.devider-light-down {
+.divider-light-down {
   background-image: url(../svg/wave-light-down.svg);
   transform: translateY(-1%);
 }
 
-.devider-dark-up, .devider-dark-down {
+.divider-dark-up, .divider-dark-down {
   background-image: url("../svg/wave-dark-up.svg");
 }
 
-.devider-dark-down {
+.divider-dark-down {
   background-image: url(../svg/wave-dark-down.svg);
   transform: translateY(-1%);
 }
@@ -540,7 +540,7 @@ nav.expanded .bar ul a {
 }
 
 .about {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .about .container {
   margin-bottom: 5rem;
@@ -641,6 +641,10 @@ nav.expanded .bar ul a {
   text-align: center;
 }
 
+.contact {
+  background-color: var(--light-color);
+}
+
 footer {
   position: relative;
   overflow: hidden;
@@ -686,7 +690,7 @@ footer .info .socials .fa-linkedin:hover {
 footer .wraper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 footer .links {
   flex-grow: 1;
@@ -708,8 +712,10 @@ footer .links ul a {
   color: var(--text-black-white);
 }
 footer .contact {
-  flex-grow: 1;
+  width: -moz-fit-content;
+  width: fit-content;
   background-color: transparent;
+  text-align: center;
 }
 footer .contact h4 {
   margin-bottom: 10px;

@@ -113,8 +113,8 @@ body[dark-theme] .d-dark-none{
 body[dark-theme] .d-dark-block{
   display: block!important;
 }
-// section Deviders
-%devider{
+// section dividers
+%divider{
   z-index: 10;
   position: absolute;
   top: 0;
@@ -122,27 +122,27 @@ body[dark-theme] .d-dark-block{
   width: 100%;
   background-size: cover;
 }
-.devider-main{
-  @extend %devider;
+.divider-main{
+  @extend %divider;
   background-image: url("../svg/wave-main.svg");
 }
-.devider-light-up{
-  @extend %devider;
+.divider-light-up{
+  @extend %divider;
   background-image: url("../svg/wave-light-up.svg");
   bottom: 0;
   transform: translateY(-98%);
 }
-.devider-light-down{
-  @extend .devider-light-up;
+.divider-light-down{
+  @extend .divider-light-up;
   background-image: url(../svg/wave-light-down.svg);
   transform: translateY(-1%)
 }
-.devider-dark-up{
-  @extend .devider-light-up;
+.divider-dark-up{
+  @extend .divider-light-up;
   background-image: url("../svg/wave-dark-up.svg");
 }
-.devider-dark-down{
-  @extend .devider-dark-up;
+.divider-dark-down{
+  @extend .divider-dark-up;
   background-image: url(../svg/wave-dark-down.svg);
   transform: translateY(-1%);
 }
@@ -548,7 +548,7 @@ nav{
   }
 // --------------- about Section
 .about{
-  overflow: hidden;
+  overflow-x: hidden;
   .container{
     margin-bottom: 5rem;
   }
@@ -647,6 +647,9 @@ nav{
     }
   }
 }
+.contact{
+  background-color: $light-color;
+}
 footer{
   position: relative;
   overflow: hidden;
@@ -690,7 +693,7 @@ footer{
   .wraper{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
   }
   .links{
     flex-grow: 1;
@@ -712,8 +715,9 @@ footer{
     }
   }
   .contact{
-    flex-grow: 1;
+    width: fit-content;
     background-color: transparent;
+    text-align: center;
     h4{
       margin-bottom: 10px;
     }
