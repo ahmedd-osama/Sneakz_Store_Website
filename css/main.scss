@@ -839,3 +839,31 @@ footer{
     }
   }
 }
+#discountModal{
+  text-align:center;
+  .modal-content{
+    background-color: #FAF8F1;
+    min-height: 500px;
+    padding: 1rem;
+    img{
+      margin: 0 auto;
+      max-width: 50%;
+      @media (#{$max-width-medium}){
+        max-width: 90%;
+      }
+    }
+    .code-box{
+      padding: 0.5rem 1rem;
+      margin: 2rem auto;
+      background-color: #03001C;
+      border-radius: 0.5rem;
+      width: fit-content;
+      cursor: pointer;
+    }
+  }
+  .custom-tooltip {
+    --bs-tooltip-bg: #03001c;
+    color: white;
+    transform: translateY(-2rem);
+  }
+}

@@ -47,6 +47,19 @@ const on = (type, el, listener, all = false) => {
         select(el, all).addEventListener(type, listener);
     }
 };
+// ------------------Modal 
+const myModal = new bootstrap.Modal('#discountModal');
+myModal.show();
+// coping discount code
+function copyValue(element) {
+    let copyText = element.innerText;
+    navigator.clipboard.writeText(copyText);
+    // updating tooltip content 
+    if (element.hasAttribute('data-bs-toggle') && element.getAttribute('data-bs-toggle') == 'tooltip') {
+        const tooltip = bootstrap.Tooltip.getInstance('.modal .code-box h3'); // Returns a Bootstrap tooltip instance
+        tooltip.setContent({ '.tooltip-inner': 'Copied!' });
+    }
+}
 // ------------------navigation bar
 let navItems = document.querySelectorAll("nav .bar ul li.nav-item a");
 navItems.forEach(item => item.addEventListener('click', (e) => { navItems.forEach(item => item.classList.remove('active')); e.target.classList.add('active'); }));
@@ -126,3 +139,6 @@ new PureCounter({
 });
 // Animate On Scroll
 AOS.init();
+// initializing bootstrap tooltips
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+let tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));

@@ -838,4 +838,36 @@ footer .link a {
   color: var(--text-black-white);
   font-size: 1.2rem;
   text-transform: none;
+}
+
+#discountModal {
+  text-align: center;
+}
+#discountModal .modal-content {
+  background-color: #FAF8F1;
+  min-height: 500px;
+  padding: 1rem;
+}
+#discountModal .modal-content img {
+  margin: 0 auto;
+  max-width: 50%;
+}
+@media (max-width: 992px) {
+  #discountModal .modal-content img {
+    max-width: 90%;
+  }
+}
+#discountModal .modal-content .code-box {
+  padding: 0.5rem 1rem;
+  margin: 2rem auto;
+  background-color: #03001C;
+  border-radius: 0.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+#discountModal .custom-tooltip {
+  --bs-tooltip-bg: #03001c;
+  color: white;
+  transform: translateY(-2rem);
 }/*# sourceMappingURL=main.css.map */
