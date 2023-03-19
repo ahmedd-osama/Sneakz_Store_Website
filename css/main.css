@@ -218,9 +218,10 @@ body[dark-theme] .d-dark-block {
 /* Custom Anchore Tags */
 a.custom-anchor {
   text-decoration: none;
-  color: inherit;
+  color: var(--text-black-white);
   position: relative;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 a.custom-anchor::after {
@@ -228,7 +229,7 @@ a.custom-anchor::after {
   content: "";
   height: 1px;
   width: 100%;
-  background-color: blue;
+  background-color: var(--text-black-white);
   bottom: -0.1rem;
   left: 0;
   border-radius: 2px;
@@ -654,12 +655,85 @@ nav.expanded .bar ul a {
 .store .status .stat p {
   text-align: center;
 }
+.store #products-filters {
+  margin-top: 0.85rem;
+}
+.store #products-filters li button {
+  border: 1px solid var(--black-white-color);
+  color: var(--text-black-white);
+  text-transform: capitalize;
+  border-radius: 0.5em;
+}
+.store #products-filters li button.active {
+  border-color: var(--main-color);
+  background-color: var(--main-color);
+  color: white;
+}
+.store .products-container {
+  margin-top: 1.5rem;
+  justify-content: space-between;
+  min-height: 50vh;
+}
+.store .products-container .product {
+  position: relative;
+  aspect-ratio: 1/1;
+}
+.store .products-container .product .cover {
+  border: 2px solid var(--light-color);
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  height: 225px;
+}
+.store .products-container .product .cover .product-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: black;
+  padding: 0.5rem;
+  font-size: 1.125rem;
+  text-transform: capitalize;
+}
+.store .products-container .product .cover img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.store .products-container .product .bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  background-color: var(--light-color);
+  border: 2px solid var(--light-color);
+  border-radius: 0.5rem;
+  padding: 2.25rem 0.25rem 0.25rem;
+  transform: translateY(-2rem);
+}
+.store .products-container .product .bar a {
+  width: -moz-fit-content;
+  width: fit-content;
+  color: var(--text-black-white);
+}
+.store .products-container .product .bar a:nth-child(2) {
+  font-size: 1.2rem;
+}
+.store .products-container .product .bar a svg {
+  cursor: pointer;
+}
+.store .btn-main {
+  width: -moz-fit-content;
+  width: fit-content;
+}
 
 .contact {
   background-color: var(--light-color);
-  overflow-x: hidden;
+  overflow: hidden;
 }
-.contact form {
+.contact #contact-form {
   display: flex;
   flex-direction: column;
   align-items: space-between;

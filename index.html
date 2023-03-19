@@ -35,13 +35,13 @@
                 <a href="#" >Home</a>
               </li>
               <li class="nav-item">
-                <a href="#" >About Us</a>
+                <a href="#about" >About Us</a>
               </li>
               <li class="nav-item">
-                <a href="#" >Store</a>
+                <a href="#store" >Store</a>
               </li>
               <li class="nav-item">
-                <a href="#" >Contact</a>
+                <a href="#contact" >Contact</a>
               </li>
               <li class="nav-btn ms-lg-auto">
                 <a href="join.html" class="btn-action" >Join</a>
@@ -153,18 +153,140 @@
       <p class="sub-text">Check out all the available sneakers</p>
     </div>
       <div class="container">
+        <div class="filters" data-aos="fade-up" data-aos-duration="500">
+          <div class="d-flex align-items-center gap-2">
+            <ul class="d-flex align-items-center gap-2 justify-content-center w-100 flex-wrap" id="products-filters" >
+              <li ><button class="btn py-1 active" type="button" data-filter = "*">all</button></li>
+              <li ><button class="btn py-1" type="button" data-filter = ".filter-recent">recent</button></li>
+              <li ><button class="btn py-1" type="button" data-filter = ".filter-nike">Nike</button></li>
+              <li ><button class="btn py-1" type="button" data-filter = ".filter-adidas">adidas</button></li>
+              <li ><button class="btn py-1" type="button" data-filter = ".filter-armor">armor</button></li>
+              <li ><button class="btn py-1" type="button" data-filter = ".filter-custom">custom</button></li>
+            </ul>
+            </ul>
+          </div>
+        </div>
+        <div class="row products-container" data-aos="fade-up" data-aos-duration="500">
+              <div class="col-6 col-md-4 col-lg-3 product filter-nike ">
+                <div class="content">
+                  <a href="product.html"><div class="cover">
+                    <img src="images/products/store/1.jpeg" alt="">
+                    <h5 class="product-name">Nike Air Jordan Lows</h4>
+                  </div></a>
+                  <div class="bar">
+                    <a href="product.html" class="btn-action"><i class="fa-solid fa-arrow-up-right-from-square fa-fw" style="transform: translateY(9%);"></i></a>
+                    <p><span class="price">2000</span><span class="currency">$</span></p>
+                    <a href="cart.html" class="btn-action bg-transparent"><i class="fa-solid fa-cart-plus fa-fw"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 product filter-nike filter-recent ">
+                <div class="content">
+                  <a href="product.html"><div class="cover">
+                    <img src="images/products/store/2.jpeg" alt="">
+                    <h5 class="product-name">Nike Air Jordan Highs</h4>
+                  </div></a>
+                  <div class="bar">
+                    <a href="product.html" class="btn-action"><i class="fa-solid fa-arrow-up-right-from-square fa-fw" style="transform: translateY(9%);"></i></a>
+                    <p><span class="price">300</span><span class="currency">$</span></p>
+                    <a href="cart.html" class="btn-action bg-transparent"><i class="fa-solid fa-cart-plus fa-fw"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 product filter-recent ">
+                <div class="content">
+                  <a href="product.html"><div class="cover">
+                    <img src="images/products/store/3.jpeg" alt="">
+                    <h5 class="product-name">Nike Air Jordan Highs</h4>
+                  </div></a>
+                  <div class="bar">
+                    <a href="product.html" class="btn-action"><i class="fa-solid fa-arrow-up-right-from-square fa-fw" style="transform: translateY(9%);"></i></a>
+                    <p><span class="price">200</span><span class="currency">$</span></p>
+                    <a href="cart.html" class="btn-action bg-transparent"><i class="fa-solid fa-cart-plus fa-fw"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 product filter-nike fiter-custom filter-nike filter-recent filter-custom">
+                <div class="content">
+                  <a href="product.html"><div class="cover">
+                    <img src="images/products/store/4.jpeg" alt="">
+                    <h5 class="product-name">Custom Nike Air Force</h4>
+                  </div></a>
+                  <div class="bar">
+                    <a href="product.html" class="btn-action"><i class="fa-solid fa-arrow-up-right-from-square fa-fw" style="transform: translateY(9%);"></i></a>
+                    <p><span class="price">2500</span><span class="currency">$</span></p>
+                    <a href="cart.html" class="btn-action bg-transparent"><i class="fa-solid fa-cart-plus fa-fw"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 product filter-nike fiter-custom filter-nike fitler-armor">
+                <div class="content">
+                  <a href="product.html"><div class="cover">
+                    <img src="images/products/store/5.jpeg" alt="">
+                    <h5 class="product-name">Nike Air Force</h4>
+                  </div></a>
+                  <div class="bar">
+                    <a href="product.html" class="btn-action"><i class="fa-solid fa-arrow-up-right-from-square fa-fw" style="transform: translateY(9%);"></i></a>
+                    <p><span class="price">200</span><span class="currency">$</span></p>
+                    <a href="cart.html" class="btn-action bg-transparent"><i class="fa-solid fa-cart-plus fa-fw"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 product filter-nike fiter-custom filter-nike filter-armor">
+                <div class="content">
+                  <a href="product.html"><div class="cover">
+                    <img src="images/products/store/6.jpeg" alt="">
+                    <h5 class="product-name">Nike Chuncky Sneakers</h4>
+                  </div></a>
+                  <div class="bar">
+                    <a href="product.html" class="btn-action"><i class="fa-solid fa-arrow-up-right-from-square fa-fw" style="transform: translateY(9%);"></i></a>
+                    <p><span class="price">1800</span><span class="currency">$</span></p>
+                    <a href="cart.html" class="btn-action bg-transparent"><i class="fa-solid fa-cart-plus fa-fw"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 product filter-nike fiter-custom filter-nike filter-custom">
+                <div class="content">
+                  <a href="product.html"><div class="cover">
+                    <img src="images/products/store/7.jpeg" alt="">
+                    <h5 class="product-name">Custom Nike Air Force</h4>
+                  </div></a>
+                  <div class="bar">
+                    <a href="product.html" class="btn-action"><i class="fa-solid fa-arrow-up-right-from-square fa-fw" style="transform: translateY(9%);"></i></a>
+                    <p><span class="price">2500</span><span class="currency">$</span></p>
+                    <a href="cart.html" class="btn-action bg-transparent"><i class="fa-solid fa-cart-plus fa-fw"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 product filter-nike filter-adidas filter-recent">
+                <div class="content">
+                  <a href="product.html"><div class="cover">
+                    <img src="images/products/store/8.jpeg" alt="">
+                    <h5 class="product-name">Adidas Not Chuncky</h4>
+                  </div></a>
+                  <div class="bar">
+                    <a href="product.html" class="btn-action"><i class="fa-solid fa-arrow-up-right-from-square fa-fw" style="transform: translateY(9%);"></i></a>
+                    <p><span class="price">200</span><span class="currency">$</span></p>
+                    <a href="cart.html" class="btn-action bg-transparent"><i class="fa-solid fa-cart-plus fa-fw"></i></a>
+                  </div>
+                </div>
+              </div>
+
+        </div>
+        <a href="store.html" class="btn-main mx-auto my-3" data-aos="fade-up" data-aos-duration="500">Shop All Sneakers</a>
       </div>
+      <div class="divider-light-up d-dark-none" style="top: 100%;"></div>
+      <div class="divider-dark-up d-none d-dark-block" style="top: 100%;"></div>
   </div>
   <div class="contact section" id="contact">
-    <div class="divider-light-up d-dark-none"></div>
-    <div class="divider-dark-up d-none d-dark-block"></div>
+
     <div class="section-title" data-aos="fade-up" data-aos-duration="500">
       <h2>Contact</h2>
       <p class="sub-text">Feel free to contact us at any time</p>
     </div>
     <div class="container">
       <div class="row">
-        <form class="col-md-6 contact-form hidden-below" id="contact-form" name="contact-form" data-netlify="true" action="modules/form/contact-form.php" method="POST" data-aos="fade-right" data-aos-duration="500">
+        <form class="col-md-6 contact-form hidden-below" id="contact-form" name="contact-form" data-netlify="true" action="modules/form/contact-form.php" method="POST" data-aos="fade-right" data-aos-duration="500" data-submit-message = 'Your message was sent succesfully'>
           <h3>Send us a message</h3>
           <input type="text" placeholder="Name" required name="name">
           <input type="email" placeholder="Email" required name="email">
@@ -179,6 +301,18 @@
         </div>
       </div>
 
+    </div>
+    <div class="section-title mt-3" data-aos="fade-up" data-aos-duration="500">
+      <h2 class="fs-4">Subscribe to our newsletter</h2>
+      <p class="sub-text">Get 20% off on your first order just by subscribing to our newslitter</p>
+    </div>
+    <div class="container">
+      <form class ="d-flex justify-content-center gap-1 mt-3"id="newsletter-form"data-submit-message = 'You have subscribed succesfully!'method="POST" data-aos="fade-up" data-aos-duration="500">
+        <input type="email" placeholder="Email" required name="email" style="width: 80%; max-width: 600px;">
+        <button  type= "submin" id ="contactSend" class="btn-main"> Send</button>
+      </form>
+      <p class="sub-text text-center"style="width: 100%;" data-aos="fade-up" data-aos-duration="500">You will be able to unsubscribe at any time</p>
+      <p class="sub-text text-center" style="width: 100%;" data-aos="fade-up" data-aos-duration="500">Read our Privacy Policy <a  class="custom-anchor">here</a></p>
     </div>
   </div>
   <footer class = "footer py-5 ">
@@ -249,6 +383,7 @@
   <script src="scripts/dist/all.min.js"></script>
   <script src="modules/purecounter/purecounter_vanilla.js"></script>
   <script src="modules/aos/aos.js"></script>
+  <script src="modules/isotope-layout/isotope.pkgd.min.js"></script>
   <!-- scripts -->
   <script src="scripts/dist/app.js"></script>
 </html>

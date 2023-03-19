@@ -236,16 +236,17 @@ body[dark-theme] .d-dark-block{
 /* Custom Anchore Tags */
 a.custom-anchor{
   text-decoration: none;
-  color: inherit;
+  color: $text-color;
   position: relative;
   white-space: nowrap;
+  cursor: pointer;
 }
 a.custom-anchor::after{
   position: absolute;
   content: "";
   height: 1px;
   width: 100%;
-  background-color: blue;
+  background-color: $text-color;
   bottom: -0.1rem;
   left: 0;
   border-radius: 2px;
@@ -620,7 +621,7 @@ nav{
   background-color: $light-color-alt;
   .section-title{
     margin-top: 4rem;
-  }
+  };
   .status{
     left: 50%;
     top: 0;
@@ -657,11 +658,84 @@ nav{
       }
     }
   }
+  #products-filters{
+    margin-top: 0.85rem;
+    li button{
+      border: 1px solid $black-white-color;
+      color: $text-color;
+      text-transform: capitalize;
+      border-radius: 0.5em;
+      &.active{
+        border-color: $main-color;
+        background-color: $main-color;
+        color: white;
+      }
+    }
+    
+  }
+  .products-container{
+    margin-top: 1.5rem;
+    justify-content: space-between;
+    min-height: 50vh;
+    .product{
+      position: relative;
+      aspect-ratio: 1/1;
+      // background-color: red;
+      .cover{
+        border: 2px solid $light-color;
+        position: relative;
+        z-index: 2;
+        overflow: hidden;
+        border-radius: 0.5rem;
+        height: 225px;
+        .product-name{
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          color: black;
+          padding: 0.5rem;
+          font-size: 1.125rem;
+          text-transform: capitalize;
+        }
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .bar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        background-color: $light-color;
+        border: 2px solid $light-color;
+        border-radius: 0.5rem;
+        padding: 2.25rem .25rem .25rem;
+        transform: translateY(-2rem);
+        a{
+          width: fit-content;
+          color: $text-color;
+          &:nth-child(2){
+            font-size: 1.2rem;
+          }
+          svg{
+            cursor: pointer;
+          }
+        }
+        
+      }
+    }
+  }
+  .btn-main{
+    width: fit-content;
+  }
 }
 .contact{
   background-color: $light-color;
-  overflow-x: hidden;
-  form{
+  overflow: hidden;
+  #contact-form{
     display: flex;
     flex-direction: column;
     align-items: space-between;

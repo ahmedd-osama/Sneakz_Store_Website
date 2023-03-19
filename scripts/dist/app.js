@@ -1,7 +1,56 @@
 "use strict";
-// navigation bar
+var _a;
+// Utilites
+function classTogglerGroup(array, className, event = 'click') {
+    array.forEach((el) => {
+        if (event) {
+            el.addEventListener(event, (clickedEl) => {
+                array.forEach((el) => { el.classList.remove(className); });
+                let clickedElement = clickedEl.target;
+                clickedElement.classList.add(className);
+            });
+        }
+        else {
+            el.classList.add(className);
+        }
+    });
+}
+function assignGroupListener(array, func, event = 'click') {
+    array.forEach((el) => {
+        if (event) {
+            el.addEventListener(event, (El) => {
+                func();
+            });
+        }
+    });
+}
+/**
+ * Easy selector helper function
+ */
+const select = (el, all = false) => {
+    el = el.trim();
+    if (all) {
+        return [...document.querySelectorAll(el)];
+    }
+    else {
+        return document.querySelector(el);
+    }
+};
+/**
+ * Easy event listener function
+ */
+const on = (type, el, listener, all = false) => {
+    if (all) {
+        select(el, all).forEach((e) => e.addEventListener(type, listener));
+    }
+    else {
+        select(el, all).addEventListener(type, listener);
+    }
+};
+// ------------------navigation bar
 let navItems = document.querySelectorAll("nav .bar ul li.nav-item a");
 navItems.forEach(item => item.addEventListener('click', (e) => { navItems.forEach(item => item.classList.remove('active')); e.target.classList.add('active'); }));
+// window listener to close navigation bar
 let nav = document.querySelector('header nav');
 function toggleNav() { nav.classList.toggle('expanded'); }
 Array.from(document.querySelectorAll('header .bar li a')).forEach(link => link.addEventListener('click', e => toggleNav()));
@@ -11,7 +60,7 @@ document.addEventListener('click', e => {
         nav.classList.remove('expanded');
     }
 });
-// landing
+// ------------------ landing
 const swiper = new Swiper('.sneaker-swiper .swiper', {
     // Optional parameters
     direction: 'horizontal',
@@ -22,8 +71,30 @@ const swiper = new Swiper('.sneaker-swiper .swiper', {
     },
     effect: "flip",
 });
+// ------------------Store Section
+// product filteration
+let productsContainer = document.querySelector(".store .products-container");
+let products = document.querySelectorAll(".store .products-container .product");
+if (productsContainer) {
+    let productsIsotope = new Isotope(productsContainer, {
+        itemSelector: '.product',
+        layoutMode: 'fitRows'
+    });
+    let portfolioFilters = Array.from(document.querySelectorAll('#products-filters li button'));
+    on('click', '#products-filters li button', function (e) {
+        e.preventDefault();
+        portfolioFilters.forEach(function (el) {
+            el.classList.remove('active');
+        });
+        let currentFilter = e.target;
+        currentFilter.classList.add('active');
+        productsIsotope.arrange({
+            filter: currentFilter.getAttribute('data-filter')
+        });
+    }, true);
+}
 /*
-contact form
+  ------------------contact form
 */
 let contactForm = document.querySelector(".contact form");
 const handleSubmit = (event) => {
@@ -36,15 +107,16 @@ const handleSubmit = (event) => {
         body: new URLSearchParams(formData).toString(),
     })
         .then(() => {
-        contactForm.innerHTML = `
-    <h3 style="text-align: center; margin: auto; ">Your message was sent succesfully</h3>
+        myForm.innerHTML = `
+    <h3 style="text-align: center; margin: auto; ">${myForm.getAttribute('data-submit-message')}</h3>
     `;
     })
         .catch((error) => alert(error));
 };
 contactForm.addEventListener("submit", handleSubmit);
+(_a = document.getElementById("newsletter-form")) === null || _a === void 0 ? void 0 : _a.addEventListener("submit", handleSubmit);
 /*
-  packages initialization
+  ------------------packages initialization
 */
 // pureCounter
 new PureCounter({
