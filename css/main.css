@@ -231,7 +231,7 @@ a.custom-anchor {
 a.custom-anchor::after {
   position: absolute;
   content: "";
-  height: 1px;
+  height: 0.16em;
   width: 100%;
   background-color: var(--text-black-white);
   bottom: -0.1rem;
@@ -721,6 +721,7 @@ nav.expanded .bar ul a {
   width: -moz-fit-content;
   width: fit-content;
   color: var(--text-black-white);
+  background-color: transparent;
 }
 .store .products-container .product .bar a:first-child {
   padding: 0.2em 0.4em;
@@ -902,7 +903,7 @@ footer .link a {
   animation-delay: 100ms;
 }
 #discountModal .modal-content .bg-animation .wrapper img:nth-child(2) {
-  animation-delay: 200ms;
+  animation-delay: 700ms;
 }
 #discountModal .modal-content .bg-animation .wrapper img:nth-child(3) {
   animation-delay: 500ms;
@@ -938,6 +939,152 @@ footer .link a {
   --bs-tooltip-bg: #03001c;
   color: white;
   transform: translateY(-2rem);
+}
+
+.login.section {
+  min-height: 100vh;
+  position: relative;
+}
+.login.section .container {
+  min-height: 100vh;
+  height: 100%;
+}
+.login.section .form-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.login.section .form-container h2 {
+  margin-top: 3rem;
+}
+.login.section .form-container > .sub-text {
+  margin-top: -0.5em;
+}
+.login.section .form-container .divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login.section .form-container .divider .sub-text {
+  padding: 0.5em;
+}
+.login.section .form-container .divider .line {
+  height: 2px;
+  background-color: #808080;
+  width: 100px;
+}
+.login.section .form-container > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 1.5px solid var(--text-black-white);
+  width: 75%;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  max-width: 400px;
+  margin-top: 1rem;
+  color: var(--text-black-white);
+}
+.login.section .form-container > button:hover {
+  border-color: var(--main-color);
+}
+.login.section .form-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  width: 100%;
+}
+.login.section .form-container form input:not([type=checkbox]) {
+  margin-top: 1rem;
+  width: 80%;
+  max-width: 400px;
+}
+.login.section .form-container form input[type=checkbox] {
+  margin-bottom: 1rem;
+}
+.login.section .form-container form .wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 80%;
+  max-width: 400px;
+  margin-top: 0.5rem;
+  color: var(--text-black-white);
+  font-size: 1rem;
+}
+.login.section .form-container form .wrapper a {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: 0.5em;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.login.section .form-container form > button {
+  width: 80%;
+  max-width: 400px;
+}
+.login.section .slides {
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login.section .slides .reviews-swiper {
+  width: 80%;
+  aspect-ratio: 1/1;
+}
+.login.section .slides .reviews-swiper .swiper-slide > img {
+  width: 100%;
+  rotate: 310deg;
+}
+.login.section .slides .reviews-swiper .swiper-slide .info {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: space-between;
+}
+.login.section .slides .reviews-swiper .swiper-slide .info .text .avatar {
+  width: 40px;
+}
+.login.section .slides .reviews-swiper .swiper-slide .info .text .avatar img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+.login.section .slides .reviews-swiper .swiper-slide .info .utilites {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.login.section .slides .reviews-swiper .swiper-slide .info .utilites .rate {
+  color: var(--main-color);
+  display: flex;
+  flex-wrap: nowrap;
+}
+.login.section .slides .reviews-swiper .swiper-slide .info .utilites .navigation {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.8rem;
+}
+.login.section .slides .reviews-swiper .swiper-slide .info .utilites .navigation .btn {
+  color: var(--text-black-white);
+  cursor: pointer;
+  border: 2px solid var(--text-black-white);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login.section .slides .reviews-swiper .swiper-slide .info .utilites .navigation .btn:hover {
+  border-color: var(--main-color);
+  color: var(--main-color);
 }
 
 @keyframes modal-bg {
