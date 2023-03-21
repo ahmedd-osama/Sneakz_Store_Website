@@ -1129,6 +1129,9 @@ footer .link a {
   width: 1rem;
   background-color: var(--main-color);
 }
+.product.section .info h3 {
+  margin-top: 1rem;
+}
 .product.section .info > .sub-text {
   font-size: 1.25rem;
 }
@@ -1138,7 +1141,7 @@ footer .link a {
   flex-wrap: wrap;
 }
 .product.section .info .sizes .size {
-  width: 60px;
+  width: calc(19.9% - 10px);
   height: 50px;
   margin: 10px 5px;
   display: flex;
@@ -1173,6 +1176,113 @@ footer .link a {
   background-color: var(--main-color);
   color: white;
   border-color: var(--main-color);
+}
+.product.section .details {
+  margin: 20px 0;
+  width: 100%;
+}
+.product.section .details h2 {
+  font-size: 1.5rem;
+}
+.product.section .details .accordion {
+  color: var(--text-black-white);
+  --bs-accordion-bg: transparent;
+  --bs-accordion-bg: transparent;
+  --bs-accordion-color: $text-color;
+  --bs-accordion-border-color: transparent;
+  --bs-accordion-btn-focus-border-color: $main-color;
+  --bs-accordion-btn-color: $text-color;
+  --bs-accordion-btn-icon-bg: $text-color;
+  --bs-accordion-btn-icon-color: $text-color;
+  --bs-accordion-btn-focus-box-shadow: rgba($color: #F0A04B, $alpha: 0.3);
+  --bs-primary: $main-color;
+}
+.product.section .details .accordion button {
+  background-color: transparent;
+  color: var(--main-color);
+}
+.product.section .details .accordion .accordion-button:not(.collapsed)::after {
+  background-image: url("../svg/angle-down-solid.svg");
+}
+.product.section .details .accordion .accordion-button::after {
+  background-image: url("../svg/angle-up-solid.svg");
+}
+.product.section .other-products {
+  scroll-snap-type: x mandatory;
+}
+.product.section .other-products .other-products-container {
+  display: none;
+}
+.product.section .other-products .other-products-container::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+  width: 8px;
+}
+.product.section .other-products .other-products-container::-webkit-scrollbar-track {
+  background-color: #1c1a33;
+}
+.product.section .other-products .other-products-container::-webkit-scrollbar-button {
+  display: none;
+}
+.product.section .other-products .other-products-container::-webkit-scrollbar-thumb:horizontal {
+  background-color: var(--main-color);
+  border-radius: 4px;
+  width: 25%;
+}
+.product.section .other-products .product {
+  position: relative;
+  aspect-ratio: 1/1;
+  margin: 0 0.5rem;
+}
+.product.section .other-products .product .cover {
+  border: 2px solid var(--light-color);
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  height: 225px;
+}
+.product.section .other-products .product .cover .product-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: black;
+  padding: 0.5rem;
+  font-size: 1.125rem;
+  text-transform: capitalize;
+}
+.product.section .other-products .product .cover img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.product.section .other-products .product .bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  background-color: var(--light-color);
+  border: 2px solid var(--light-color);
+  border-radius: 0.5rem;
+  padding: 2.25rem 0.25rem 0.25rem;
+  transform: translateY(-2rem);
+}
+.product.section .other-products .product .bar a {
+  width: -moz-fit-content;
+  width: fit-content;
+  color: var(--text-black-white);
+  background-color: transparent;
+}
+.product.section .other-products .product .bar a:first-child {
+  padding: 0.2em 0.4em;
+}
+.product.section .other-products .product .bar a:nth-child(2) {
+  font-size: 1.2rem;
+}
+.product.section .other-products .product .bar a svg {
+  cursor: pointer;
 }
 
 @keyframes modal-bg {
