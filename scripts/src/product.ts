@@ -70,17 +70,46 @@ window.addEventListener('load', navbarlinksActive);
 document.addEventListener('scroll', navbarlinksActive);
 
 
-// ------------ Login section
-const swiper = new Swiper('.reviews-swiper .swiper', {
+// ------------ product section
+
+const productSwiper = new Swiper('.slides .swiper', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
   autoplay: {
-    delay: 50000,
-    disableOnInteraction: false
+    delay: 5000,
+    disableOnInteraction: true,
   },
-  navigation: {
-    nextEl: '.next',
-    prevEl: '.previous',
-  },
+  pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+    },
+}); 
+// sizes
+const allSizes = document.querySelectorAll('.product .sizes .size');
+classTogglerGroup(allSizes, 'active', 'click')
+// snipText
+let snipTextToggle = (el: any)=> {
+  var dots = el.querySelector(".dots");
+  var moreText = el.querySelector(".more-text");
+  var btnText = el.querySelector(".snip-btn");
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+Array.from(document.querySelectorAll('.text-snip')).forEach((text: any) => {
+  text.querySelector('.more-text').style.display = "none";
+  text.querySelector('.snip-btn').addEventListener('click', ()=>snipTextToggle(text) )
+});
+
+// -----------------packages initialization
+const portfolioLightbox = GLightbox({
+  selector: '.product-lightbox'
 });

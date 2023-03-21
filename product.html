@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sneakz</title>
+    <title>Sneakz | Product Details</title>
     <link rel="shortcut icon" href="images/logo/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/fontawesome/all.min.css">
     <link rel="stylesheet" href="css/normalize/normalize.css">
@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="css/main.css">
     <!-- packages -->
     <link rel="stylesheet" href="modules/aos/aos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="modules/glightbox/css/glightbox.min.css">
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,7 +68,76 @@
       </div>
     </nav>
   </header>
-
+  <div class="product section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 slides">
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide position-relative" >
+                <div class="img-container"><a href="images/products/product/0.webp"data-gallery="productGallry" class="product-lightbox" title="product"><img src="images/products/product/0.webp" ></a></div>
+              </div>
+              <div class="swiper-slide position-relative" >
+                <div class="img-container"><a href="images/products/product/2.webp"data-gallery="productGallry" class="product-lightbox" title="product"><img src="images/products/product/2.webp" ></a></div>
+              </div>
+              <div class="swiper-slide position-relative" >
+                <div class="img-container"><a href="images/products/product/3.webp"data-gallery="productGallry" class="product-lightbox" title="product"><img src="images/products/product/3.webp" ></a></div>
+              </div>
+              <div class="swiper-slide position-relative" >
+                <div class="img-container"><a href="images/products/product/4.webp"data-gallery="productGallry" class="product-lightbox" title="product"><img src="images/products/product/4.webp" ></a></div>
+              </div>
+              <div class="swiper-slide position-relative" >
+                <div class="img-container"><a href="images/products/product/5.webp"data-gallery="productGallry" class="product-lightbox" title="product"><img src="images/products/product/5.webp" ></a></div>
+              </div>
+              <div class="swiper-slide position-relative" >
+                <div class="img-container"><a href="images/products/product/6.webp"data-gallery="productGallry" class="product-lightbox" title="product"><img src="images/products/product/6.webp" ></a></div>
+              </div>
+              <div class="swiper-slide position-relative" >
+                <div class="img-container"><a href="images/products/product/7.webp"data-gallery="productGallry" class="product-lightbox" title="product"><img src="images/products/product/7.webp" ></a></div>
+              </div>
+          </div>
+          <div class="swiper-pagination">
+          </div>
+        </div>
+        </div>
+        <div class="col-md-6 info">
+          <h3>Air Jordan 1 Hi FlyEase</h3>
+          <p>Men's Shoes</p>
+          <p class="sub-text">$150</p>
+          <div class="size-container">
+            <div class="wrapper d-flex justify-content-between">
+              <p>Select Size</p>
+              <a  class="custom-anchor "style = 'font-size: 0.8rem;'>Size Guid</a>
+            </div>
+            <div class="sizes">
+              <div class="size out">7</div>
+              <div class="size out">7.5</div>
+              <div class="size">8</div>
+              <div class="size out">8.5</div>
+              <div class="size">9</div>
+              <div class="size out">9.5</div>
+              <div class="size out">10</div>
+              <div class="size">10.5</div>
+              <div class="size out">11</div>
+              <div class="size">11.5</div>
+              <div class="size">12</div>
+              <div class="size out">12.5</div>
+              <div class="size">13</div>
+              <div class="size">14</div>
+              <div class="size out">15</div>
+              <div class="size">16</div>
+              <div class="size">17</div>
+              <div class="size">18</div>
+            </div>
+            <button>Add to Cart <i class="fa-solid fa-cart-plus"></i></button>
+            <button>Favorite <i class="fa-regular fa-heart"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <footer class = "footer py-5 ">
     <div class="divider-light-down d-dark-none"></div>
     <div class="divider-dark-down d-none d-dark-block"></div>
@@ -133,5 +204,8 @@
   <script src="scripts/dist/bootstrap.bundle.min.js"></script>
   <script src="scripts/dist/all.min.js"></script>
   <script src="modules/aos/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="modules/glightbox/js/glightbox.min.js"></script>
   <!-- scripts -->
+  <script src="scripts/dist/product.js"></script>
 </html>

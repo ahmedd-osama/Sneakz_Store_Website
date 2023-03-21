@@ -250,9 +250,9 @@ a.custom-anchor::after{
   height: 0.16em;
   width: 100%;
   background-color: $text-color;
-  bottom: -0.1rem;
+  bottom: 0.32em;
   left: 0;
-  border-radius: 2px;
+  border-radius: 0.16em;
 }
 /* input stylling */
 input, textarea{
@@ -267,6 +267,8 @@ input, textarea{
     outline: none;
   }
 }
+/* text snip */
+
 
 /*
 ---------------Navigation bar
@@ -939,9 +941,9 @@ footer{
   }
 }
 
-// --------------- Pages -------------------
+// --------------- Pages ----------------
 
-// login page
+// --------------- login page
 .login.section{
   min-height: 100vh;
   position: relative;
@@ -1093,7 +1095,100 @@ footer{
     }
   }
 }
-// -----------animations
+// --------------- product page
+.product.section{
+  padding-top: 5rem;
+  .swiper{
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    max-height: 80vh;
+    .swiper-wrapper{
+      .slides .swiper-slide{
+        aspect-ratio: 1/1;
+        .img-container{
+          position: relative;
+          width: 100%;
+          height: 100%;
+          img{
+            width: 100%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -60%)
+          }
+        }
+      }
+    }
+    .swiper-pagination{
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      .swiper-pagination-bullet{
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 8px;
+        background-color: $text-grey;
+        transition: 500ms width ease;
+        opacity: 1;
+      }
+      .swiper-pagination-bullet-active{
+        width: 1rem;
+        background-color: $main-color;
+      }
+    }
+  }
+  .info{
+    &> .sub-text{
+      font-size: 1.25rem;
+    }
+    .sizes{
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      .size{
+        width: 60px;
+        height: 50px;
+        margin: 10px 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid $text-color;
+        border-radius: 10px;
+        cursor: pointer;
+        
+        &.active:not(.out-of-stock), &:not(.out-of-stock):hover{
+          border-color: $main-color;
+        }
+        &.out{
+          pointer-events: none;
+          background-color: gray;
+          border-color: gray;
+          opacity: 0.3
+        }
+      }
+
+    }
+    button{
+      display: block;
+      margin: 0.5rem auto;
+      min-width: 80%;
+      max-width: 100%;
+      padding: 0.5rem;
+      border-radius: 3rem;
+      border: 1.5px solid $black-white-color; 
+      background-color: transparent;
+      color: $text-color;
+      transition: 0.4s;
+      &:hover{
+        background-color: var(--main-color);
+        color: white;
+        border-color: $main-color
+      }
+    }
+  }
+}
+// ----------- animations 
 @keyframes modal-bg{
   0%{
     transform: translate(0%, -50%);
