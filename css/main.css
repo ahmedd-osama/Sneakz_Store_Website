@@ -67,6 +67,10 @@ body a {
   color: initial;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 /* Variables*/
 body[dark-theme] {
   --light-color: #03001C ;
@@ -718,6 +722,9 @@ nav.expanded .bar ul a {
   width: fit-content;
   color: var(--text-black-white);
 }
+.store .products-container .product .bar a:first-child {
+  padding: 0.2em 0.4em;
+}
 .store .products-container .product .bar a:nth-child(2) {
   font-size: 1.2rem;
 }
@@ -847,6 +854,7 @@ footer .link a {
   background-color: #FAF8F1;
   min-height: 500px;
   padding: 1rem;
+  position: relative;
 }
 #discountModal .modal-content img {
   margin: 0 auto;
@@ -866,8 +874,86 @@ footer .link a {
   width: fit-content;
   cursor: pointer;
 }
+#discountModal .modal-content .bg-animation {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+#discountModal .modal-content .bg-animation .wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translate(-10%, -10%);
+}
+#discountModal .modal-content .bg-animation .wrapper img {
+  position: absolute;
+  max-width: 20%;
+  top: 50%;
+  left: 50%;
+  transform: translate(0%, -50%);
+  transform-origin: center;
+  scale: 0;
+  animation: modal-bg 2300ms ease 0s infinite;
+}
+#discountModal .modal-content .bg-animation .wrapper img:first-child {
+  animation-delay: 100ms;
+}
+#discountModal .modal-content .bg-animation .wrapper img:nth-child(2) {
+  animation-delay: 200ms;
+}
+#discountModal .modal-content .bg-animation .wrapper img:nth-child(3) {
+  animation-delay: 500ms;
+}
+#discountModal .modal-content .bg-animation .wrapper img:nth-child(4) {
+  animation-delay: 1000ms;
+}
+#discountModal .modal-content .bg-animation .wrapper img:nth-child(4) {
+  animation-delay: 1700ms;
+}
+#discountModal .modal-content .bg-animation .wrapper img:nth-child(5) {
+  animation-delay: 1300ms;
+}
+#discountModal .modal-content .bg-animation .wrapper img:nth-child(6) {
+  animation-delay: 1500ms;
+}
+#discountModal .modal-content .bg-animation .wrapper img:nth-child(7) {
+  animation-delay: 1020ms;
+}
+#discountModal .modal-content .bg-animation .wrapper img:nth-child(8) {
+  animation-delay: 120ms;
+}
+#discountModal .modal-content .bg-animation .wrapper img:nth-child(9) {
+  animation-delay: 2020ms;
+}
+#discountModal .modal-content .bg-animation .wrapper img:nth-child(10) {
+  animation-delay: 500ms;
+}
+#discountModal .modal-content .bg-animation .wrapper img:nth-child(11) {
+  animation-delay: 120ms;
+}
 #discountModal .custom-tooltip {
   --bs-tooltip-bg: #03001c;
   color: white;
   transform: translateY(-2rem);
+}
+
+@keyframes modal-bg {
+  0% {
+    transform: translate(0%, -50%);
+    scale: 0;
+  }
+  70% {
+    scale: 0.7;
+  }
+  80% {
+    transform: translate(300%, -50%);
+    scale: 1.6;
+  }
+  100% {
+    transform: translate(500%, -50%);
+    scale: 2;
+  }
 }/*# sourceMappingURL=main.css.map */

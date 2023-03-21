@@ -24,9 +24,7 @@ function assignGroupListener(array, func, event = 'click') {
         }
     });
 }
-/**
- * Easy selector helper function
- */
+// Easy selector helper function
 const select = (el, all = false) => {
     el = el.trim();
     if (all) {
@@ -36,9 +34,7 @@ const select = (el, all = false) => {
         return document.querySelector(el);
     }
 };
-/**
- * Easy event listener function
- */
+// Easy event listener function
 const on = (type, el, listener, all = false) => {
     if (all) {
         select(el, all).forEach((e) => e.addEventListener(type, listener));
@@ -47,7 +43,7 @@ const on = (type, el, listener, all = false) => {
         select(el, all).addEventListener(type, listener);
     }
 };
-// ------------------Modal 
+// ------------------ Modal 
 const myModal = new bootstrap.Modal('#discountModal');
 myModal.show();
 // coping discount code
@@ -60,7 +56,7 @@ function copyValue(element) {
         tooltip.setContent({ '.tooltip-inner': 'Copied!' });
     }
 }
-// ------------------navigation bar
+// ------------------ navigation bar
 let navItems = document.querySelectorAll("nav .bar ul li.nav-item a");
 navItems.forEach(item => item.addEventListener('click', (e) => { navItems.forEach(item => item.classList.remove('active')); e.target.classList.add('active'); }));
 // window listener to close navigation bar
@@ -73,6 +69,25 @@ document.addEventListener('click', e => {
         nav.classList.remove('expanded');
     }
 });
+// updating active links on scroll 
+const navbarlinksActive = () => {
+    let position = window.scrollY + 200;
+    navItems.forEach((navItem) => {
+        if (!navItem.hash)
+            return;
+        let section = select(navItem.hash);
+        if (!section)
+            return;
+        if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
+            navItem.classList.add('active');
+        }
+        else {
+            navItem.classList.remove('active');
+        }
+    });
+};
+window.addEventListener('load', navbarlinksActive);
+document.addEventListener('scroll', navbarlinksActive);
 // ------------------ landing
 const swiper = new Swiper('.sneaker-swiper .swiper', {
     // Optional parameters
@@ -106,9 +121,7 @@ if (productsContainer) {
         });
     }, true);
 }
-/*
-  ------------------contact form
-*/
+// ------------------contact form
 let contactForm = document.querySelector(".contact form");
 const handleSubmit = (event) => {
     event.preventDefault();
@@ -142,3 +155,5 @@ AOS.init();
 // initializing bootstrap tooltips
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
 let tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+// progress Scrollup Button
+progressScrollTopBtn({ backgroundColor: 'transparent', color: 'var(--text-black-white)', strokeColor: 'var(--main-color)' });

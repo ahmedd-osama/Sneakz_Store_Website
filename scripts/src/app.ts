@@ -21,29 +21,24 @@ function assignGroupListener(array: Element[], func: any, event: string | undefi
     }
   })
 }
-  /**
-   * Easy selector helper function
-   */
-  const select = (el: any, all = false) => {
-    el = el.trim()
-    if (all) {
-      return [...document.querySelectorAll(el)]
-    } else {
-      return document.querySelector(el)
-    }
+// Easy selector helper function
+const select = (el: any, all = false) => {
+  el = el.trim()
+  if (all) {
+    return [...document.querySelectorAll(el)]
+  } else {
+    return document.querySelector(el)
   }
-
-  /**
-   * Easy event listener function
-   */
-  const on = (type:string, el: String, listener:any, all = false) => {
-    if (all) {
-      select(el, all).forEach((e: any )=> e.addEventListener(type, listener))
-    } else {
-      select(el, all).addEventListener(type, listener)
-    }
+}
+// Easy event listener function
+const on = (type:string, el: String, listener:any, all = false) => {
+  if (all) {
+    select(el, all).forEach((e: any )=> e.addEventListener(type, listener))
+  } else {
+    select(el, all).addEventListener(type, listener)
   }
-// ------------------Modal 
+}
+// ------------------ Modal 
 const myModal = new bootstrap.Modal('#discountModal')
 myModal.show();
 // coping discount code
@@ -57,7 +52,7 @@ function copyValue(element: any) {
   }
 }
 
-// ------------------navigation bar
+// ------------------ navigation bar
 let navItems = document.querySelectorAll("nav .bar ul li.nav-item a");
 navItems.forEach(item=> item.addEventListener('click',(e:any)=>{navItems.forEach(item=>item.classList.remove('active')); e.target.classList.add('active'); }));
 
@@ -65,13 +60,28 @@ navItems.forEach(item=> item.addEventListener('click',(e:any)=>{navItems.forEach
 let nav: any = document.querySelector('header nav');
 function toggleNav(): void{nav.classList.toggle('expanded')}
 Array.from(document.querySelectorAll('header .bar li a')).forEach(link=>link.addEventListener('click', e=>toggleNav()))
-
 document.addEventListener('click', e=>{
   let clickedElement: any = e.target;
   if (!clickedElement.matches('header nav *') && nav.classList.contains('expanded')){
     nav.classList.remove('expanded');
   }
 });
+// updating active links on scroll 
+const navbarlinksActive = () => {
+  let position = window.scrollY + 200;
+  navItems.forEach((navItem: any) => {
+    if (!navItem.hash) return
+    let section = select(navItem.hash)
+    if (!section) return
+    if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
+      navItem.classList.add('active')
+    } else {
+      navItem.classList.remove('active')
+    }
+  })
+}
+window.addEventListener('load', navbarlinksActive);
+document.addEventListener('scroll', navbarlinksActive);
 
 // ------------------ landing
 const swiper = new Swiper('.sneaker-swiper .swiper', {
@@ -84,6 +94,7 @@ const swiper = new Swiper('.sneaker-swiper .swiper', {
   },
   effect: "flip",
 });
+
 
 // ------------------Store Section
 // product filteration
@@ -111,9 +122,7 @@ if (productsContainer) {
   }, true);
 }
 
-/*
-  ------------------contact form
-*/
+// ------------------contact form
 let contactForm: any = document.querySelector(".contact form");
 const handleSubmit: any = (event: any) => {
   event.preventDefault();
@@ -155,3 +164,5 @@ AOS.init();
 // initializing bootstrap tooltips
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
 let tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+// progress Scrollup Button
+progressScrollTopBtn({backgroundColor:  'transparent', color: 'var(--text-black-white)', strokeColor: 'var(--main-color)'})
