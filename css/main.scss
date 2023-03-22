@@ -1300,6 +1300,102 @@ footer{
     }
   }
 }
+.store.page{
+  background-color: $light-color;
+  .filters{
+    padding: 2.5rem 0.5em 0.5em;
+    height: fit-content;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: $light-color;
+    z-index: 900;
+    .optional-filters{
+      .option-filter{
+        padding: 0.4em;
+        .dropdown{
+          
+          button{
+          color: $text-color;
+          width: 100%;
+          text-align: start;
+          font-size: 1.25rem;
+          border-color: var(--text-color);
+          &::after{
+            margin-left: auto !important;
+            margin-right: 0.255rem !important;
+            position: absolute;
+            right: 0.255rem;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+          }
+          .dropdown-menu{
+            --bs-dropdown-link-hover-bg: #F0A04B;
+            --bs-dropdown-link-hover-color: white;
+            background-color: $light-color;
+            border-color: $text-color;
+            width: 100%;
+            min-width: fit-content;
+            .dropdown-item{color: $text-color;}
+            .dropdown-item{cursor:pointer;}
+          }
+        }
+        input[type='checkbox']{
+          background-color: transparent;
+          border-color: white;
+          &:focus{
+            box-shadow: 20% 0 0 0.25em rgba($color: #F0A04B, $alpha: 0.1);
+          }
+          &:checked{
+            background-color: $main-color;
+            border-color: var(--main-color);
+          }
+        }
+        input[type='checkbox'], label{
+          font-size: 1rem;
+        }
+        &.price-range{
+          .price-container{
+            display: flex;
+            justify-content: space-between;
+            padding: 0 0.4em;
+            .price-box{
+              color: white;
+              padding: 0.2em 0.6em;
+              border: 1px solid $text-color;
+              border-radius: 0.5em;
+              background-color: rgb(88, 88, 88);
+            }
+          }
+          .slider{
+            width: 100%;
+            height: 3px;
+            border-radius: 3px;
+            margin-top: 0.6rem;
+            background-color: $light-color-alt;
+            padding: 0 10% 0 15%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .dot{
+              background-color: $main-color;
+              height: 9px;
+              width: 9px;
+              border-radius: 9px;
+              cursor: grab;
+            }
+            .active-slider{
+              height: 100%;
+              flex-grow: 1;
+              background-color: $main-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 // ----------- animations 
 @keyframes modal-bg{
   0%{

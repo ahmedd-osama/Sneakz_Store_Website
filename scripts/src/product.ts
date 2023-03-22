@@ -108,6 +108,7 @@ Array.from(document.querySelectorAll('.text-snip')).forEach((text: any) => {
   text.querySelector('.more-text').style.display = "none";
   text.querySelector('.snip-btn').addEventListener('click', ()=>snipTextToggle(text) )
 });
+
 // -----------------packages initialization
 const portfolioLightbox = GLightbox({
   selector: '.product-lightbox'

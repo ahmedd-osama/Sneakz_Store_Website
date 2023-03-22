@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sneakz</title>
+    <title>Store | Sneakz</title>
     <link rel="shortcut icon" href="images/logo/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/fontawesome/all.min.css">
     <link rel="stylesheet" href="css/normalize/normalize.css">
@@ -67,6 +67,220 @@
     </nav>
   </header>
 
+  <div class="store section page" id="store">
+    <div class="divider-light-down d-dark-none"></div>
+    <div class="divider-dark-down d-none d-dark-block"></div>
+    <div class="section-title" >
+      <h2>Store</h2>
+      <p class="sub-text">Check out all the available sneakers</p>
+    </div>
+      <div class="container">
+        <div class="filters" >
+          <div class="d-flex align-items-center gap-2">
+            <ul class="d-flex align-items-center gap-2 justify-content-center w-100 flex-wrap" id="products-filters" >
+              <li ><button class="btn py-1 active" type="button" data-filter = "*">all</button></li>
+              <li ><button class="btn py-1" type="button" data-filter = ".filter-recent">recent</button></li>
+              <li ><button class="btn py-1" type="button" data-filter = ".filter-nike">Nike</button></li>
+              <li ><button class="btn py-1" type="button" data-filter = ".filter-adidas">adidas</button></li>
+              <li ><button class="btn py-1" type="button" data-filter = ".filter-armor">armor</button></li>
+              <li ><button class="btn py-1" type="button" data-filter = ".filter-custom">custom</button></li>
+            </ul>
+            </ul>
+          </div>
+          <div class="row optional-filters">
+            <div class="col-6 col-md-3 option-filter sort">
+              <div class="dropdown">
+                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Sort By
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" data-filter id="sort-high-low">Price: highest to lowest</a></li>
+                  <li><a class="dropdown-item" id="sort-low-high">Price: lowest to highest</a></li>
+                  <li><a class="dropdown-item" >Most Popular</a></li>
+                  <li><a class="dropdown-item" >New</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 option-filter price-range">
+              <div class="price-container">
+                <div class="price-box">
+                  <p>$<span contenteditable="true">200</span></p>
+                </div>
+                <div class="price-box">
+                  <p>$<span contenteditable="true">3000</span></p>
+                </div>
+              </div>
+              <div class="slider">
+                <div class="dot"></div>
+                <div class="active-slider"></div>
+                <div class="dot"></div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 option-filter">
+              <div class="dropdown">
+                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Size
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" >6</a></li>
+                  <li><a class="dropdown-item" >7</a></li>
+                  <li><a class="dropdown-item" >8</a></li>
+                  <li><a class="dropdown-item" >9</a></li>
+                  <li><a class="dropdown-item" >10</a></li>
+                  <li><a class="dropdown-item" >11</a></li>
+                  <li><a class="dropdown-item" >12</a></li>
+                  <li><a class="dropdown-item" >13</a></li>
+                  <li><a class="dropdown-item" >14</a></li>
+                  <li><a class="dropdown-item" >15</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 option-filter d-flex align-items-center">
+              <div class="wrapper">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Free Shipping
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row products-container">
+          <div class="col-6 col-md-4 col-lg-3 product filter-nike ">
+            <div class="content">
+              <a href="product.html"><div class="cover">
+                <img src="images/products/store/1.jpeg" alt="">
+                <h5 class="product-name">Nike Air Jordan Lows</h4>
+              </div></a>
+              <div class="bar">
+                <a href="product.html" class="btn-action"><i class="fa-solid fa-arrow-up-right-from-square fa-fw" style="transform: translateY(9%);"></i></a>
+                <p><span class="price">2000</span><span class="currency">$</span></p>
+                <a href="cart.html" class="btn-action bg-transparent"><i class="fa-solid fa-cart-plus fa-fw"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 product filter-nike filter-recent ">
+            <div class="content">
+              <a href="product.html"><div class="cover">
+                <img src="images/products/store/2.jpeg" alt="">
+                <h5 class="product-name">Nike Air Jordan Highs</h4>
+              </div></a>
+              <div class="bar">
+                <a href="product.html" class="btn-action"><i class="fa-solid fa-arrow-up-right-from-square fa-fw" style="transform: translateY(9%);"></i></a>
+                <p><span class="price">300</span><span class="currency">$</span></p>
+                <a href="cart.html" class="btn-action bg-transparent"><i class="fa-solid fa-cart-plus fa-fw"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 product filter-recent ">
+            <div class="content">
+              <a href="product.html"><div class="cover">
+                <img src="images/products/store/3.jpeg" alt="">
+                <h5 class="product-name">Nike Air Jordan Highs</h4>
+              </div></a>
+              <div class="bar">
+                <a href="product.html" class="btn-action"><i class="fa-solid fa-arrow-up-right-from-square fa-fw" style="transform: translateY(9%);"></i></a>
+                <p><span class="price">200</span><span class="currency">$</span></p>
+                <a href="cart.html" class="btn-action bg-transparent"><i class="fa-solid fa-cart-plus fa-fw"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 product filter-nike fiter-custom filter-nike filter-recent filter-custom">
+            <div class="content">
+              <a href="product.html"><div class="cover">
+                <img src="images/products/store/4.jpeg" alt="">
+                <h5 class="product-name">Custom Nike Air Force</h4>
+              </div></a>
+              <div class="bar">
+                <a href="product.html" class="btn-action"><i class="fa-solid fa-arrow-up-right-from-square fa-fw" style="transform: translateY(9%);"></i></a>
+                <p><span class="price">2500</span><span class="currency">$</span></p>
+                <a href="cart.html" class="btn-action bg-transparent"><i class="fa-solid fa-cart-plus fa-fw"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 product filter-nike fiter-custom filter-nike filter-recent filter-custom">
+            <div class="content">
+              <a href="product.html"><div class="cover">
+                <img src="images/products/store/4.jpeg" alt="">
+                <h5 class="product-name">Custom Nike Air Force</h4>
+              </div></a>
+              <div class="bar">
+                <a href="product.html" class="btn-action"><i class="fa-solid fa-arrow-up-right-from-square fa-fw" style="transform: translateY(9%);"></i></a>
+                <p><span class="price">2500</span><span class="currency">$</span></p>
+                <a href="cart.html" class="btn-action bg-transparent"><i class="fa-solid fa-cart-plus fa-fw"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 product filter-nike fiter-custom filter-nike fitler-armor filter-adidas">
+            <div class="content">
+              <a href="product.html"><div class="cover">
+                <img src="images/products/store/5.jpeg" alt="">
+                <h5 class="product-name">Nike Air Force</h4>
+              </div></a>
+              <div class="bar">
+                <a href="product.html" class="btn-action"><i class="fa-solid fa-arrow-up-right-from-square fa-fw" style="transform: translateY(9%);"></i></a>
+                <p><span class="price">200</span><span class="currency">$</span></p>
+                <a href="cart.html" class="btn-action bg-transparent"><i class="fa-solid fa-cart-plus fa-fw"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 product filter-nike fiter-custom filter-nike filter-armor">
+            <div class="content">
+              <a href="product.html"><div class="cover">
+                <img src="images/products/store/6.jpeg" alt="">
+                <h5 class="product-name">Nike Chuncky Sneakers</h4>
+              </div></a>
+              <div class="bar">
+                <a href="product.html" class="btn-action"><i class="fa-solid fa-arrow-up-right-from-square fa-fw" style="transform: translateY(9%);"></i></a>
+                <p><span class="price">1800</span><span class="currency">$</span></p>
+                <a href="cart.html" class="btn-action bg-transparent"><i class="fa-solid fa-cart-plus fa-fw"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 product filter-nike fiter-custom filter-nike filter-armor">
+            <div class="content">
+              <a href="product.html"><div class="cover">
+                <img src="images/products/store/6.jpeg" alt="">
+                <h5 class="product-name">Nike Chuncky Sneakers</h4>
+              </div></a>
+              <div class="bar">
+                <a href="product.html" class="btn-action"><i class="fa-solid fa-arrow-up-right-from-square fa-fw" style="transform: translateY(9%);"></i></a>
+                <p><span class="price">1800</span><span class="currency">$</span></p>
+                <a href="cart.html" class="btn-action bg-transparent"><i class="fa-solid fa-cart-plus fa-fw"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 product filter-nike fiter-custom filter-nike filter-custom filter-adidas">
+            <div class="content">
+              <a href="product.html"><div class="cover">
+                <img src="images/products/store/7.jpeg" alt="">
+                <h5 class="product-name">Custom Nike Air Force</h4>
+              </div></a>
+              <div class="bar">
+                <a href="product.html" class="btn-action"><i class="fa-solid fa-arrow-up-right-from-square fa-fw" style="transform: translateY(9%);"></i></a>
+                <p><span class="price">2500</span><span class="currency">$</span></p>
+                <a href="cart.html" class="btn-action bg-transparent"><i class="fa-solid fa-cart-plus fa-fw"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 product filter-nike filter-adidas filter-recent ">
+            <div class="content">
+              <a href="product.html"><div class="cover">
+                <img src="images/products/store/8.jpeg" alt="">
+                <h5 class="product-name">Adidas Not Chuncky</h4>
+              </div></a>
+              <div class="bar">
+                <a href="product.html" class="btn-action"><i class="fa-solid fa-arrow-up-right-from-square fa-fw" style="transform: translateY(9%);"></i></a>
+                <p><span class="price">200</span><span class="currency">$</span></p>
+                <a href="cart.html" class="btn-action bg-transparent"><i class="fa-solid fa-cart-plus fa-fw"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="divider-light-up d-dark-none" style="top: 100%;"></div>
+      <div class="divider-dark-up d-none d-dark-block" style="top: 100%;"></div>
+  </div>
   <footer class = "footer py-5 ">
     <div class="divider-light-down d-dark-none"></div>
     <div class="divider-dark-down d-none d-dark-block"></div>
@@ -133,5 +347,8 @@
   <script src="scripts/dist/bootstrap.bundle.min.js"></script>
   <script src="scripts/dist/all.min.js"></script>
   <script src="modules/aos/aos.js"></script>
+  <script src="modules/progress-scroll-top/progress-scroll-top.js"></script>
+  <script src="modules/isotope-layout/isotope.pkgd.min.js"></script>
   <!-- scripts -->
+  <script src = "scripts/dist/store.js"></script>
 </html>
