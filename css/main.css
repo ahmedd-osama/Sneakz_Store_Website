@@ -15,7 +15,7 @@ html {
   --text-white-black: white;
   --white-black-color: white;
   --black-white-color: black;
-  --text-grey: #808080;
+  --text-gray: #808080;
   /* global colors */
   --facebook-blue: #4267B2;
   --twitter-blue: #1DA1F2;
@@ -1378,6 +1378,109 @@ footer .link a {
   height: 100%;
   flex-grow: 1;
   background-color: var(--main-color);
+}
+
+.cart.section.page {
+  background-color: var(--light-color-alt);
+  min-height: 90vh;
+  padding-bottom: 5rem;
+}
+.cart.section.page .container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.cart.section.page .row {
+  padding: 1rem;
+}
+.cart.section.page #cart {
+  background-color: var(--light-color);
+  width: 100%;
+  max-width: 700px;
+  height: 95%;
+  padding: 1rem;
+  margin-top: 1rem;
+  border: 1px solid var(--main-color);
+  border-radius: 0.5rem;
+}
+.cart.section.page #cart .cart-iterface {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.cart.section.page #cart .cart-iterface .items .item {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  height: 120px;
+}
+.cart.section.page #cart .cart-iterface .items .item .product-img {
+  width: 100px;
+  min-width: 80px;
+  height: 100px;
+  min-height: 80px;
+  aspect-ratio: 1/1;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+.cart.section.page #cart .cart-iterface .items .item .product-img img {
+  width: 100%;
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.cart.section.page #cart .cart-iterface .items .item .info {
+  flex-grow: 1;
+  padding: 0.5em;
+}
+.cart.section.page #cart .cart-iterface .items .item .info h4 {
+  font-size: clamp(1.2rem, 2.8vw, 1.5rem);
+}
+.cart.section.page #cart .cart-iterface .items .item .wrapper {
+  padding: 0.5em;
+  width: 25%;
+  font-size: clamp(1.6rem, 4.8vw, 1.8rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.cart.section.page #cart .cart-iterface .items .item .wrapper .counter {
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+  border: 1px solid var(--text-black-white);
+  border-radius: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  font-size: clamp(1rem, 2.8vw, 1.35rem);
+}
+.cart.section.page #cart .cart-iterface .items .item .wrapper .counter .counter-item {
+  padding: 0 0.4em;
+  background-color: transparent;
+  max-width: 2em;
+  border-radius: 0;
+}
+.cart.section.page #cart .cart-iterface .items .item .wrapper .counter .counter-item:focus {
+  border-color: transparent;
+}
+.cart.section.page #cart .cart-iterface .items .item .wrapper .counter .counter-item:not(:last-child) {
+  border-right: 1px solid var(--text-black-white);
+  cursor: pointer;
+}
+.cart.section.page #cart .cart-iterface .items .item .wrapper .counter .counter-item:not(:nth-child(2)):hover {
+  background-color: var(--action-color);
+  color: white;
+}
+.cart.section.page #cart .cart-iterface > div:not(:first-child) {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: 1px solid #808080;
 }
 
 @keyframes modal-bg {

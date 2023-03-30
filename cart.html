@@ -67,9 +67,52 @@
     </nav>
   </header>
 
-  <footer class = "footer py-5 ">
-    <div class="divider-light-down d-dark-none"></div>
-    <div class="divider-dark-down d-none d-dark-block"></div>
+  <div class="cart section page">
+    <div class="section-title" >
+      <h2>Cart</h2>
+      <p class="sub-text">Review Your Order And Checkout</p>
+    </div>
+    <div class="container">
+        <div class="cart-container col-sm-10 col-md-8 col-lg-6" id="cart">
+          <div class="cart-iterface">
+            <div class="items">
+              <div class="item">
+                  <div class="product-img "><img src="images/products/product/0.webp" alt=""></div>
+                  <div class="info">
+                    <h4>Nike Air Jordon 1 High Fly</h4>
+                    <p class="sub-text">36 EU - 4US</p>
+                  </div>
+                  <div class="wrapper ">
+                    <div class="price">$300</div>
+                    <div class="counter">
+                      <btn  class="counter-item">-</btn>
+                      <input class="counter-item" contenteditable="true" type="number" value="01">
+                      <btn class="counter-item">+</btn>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="invoice d-flex flex-column gap-3">
+              <div class="copun-input d-flex gap-2 fs-6">
+                <input type="text" placeholder="Enter Coupon Code" style="flex-grow: 1;">
+                <button class="btn-action">Apply</button>
+              </div>
+              <div class="subtotal d-flex justify-content-between">
+                <p class="sub-text">Subtotal</p>
+                <p>600$</p>
+              </div>
+              <div class="shipping d-flex justify-content-between">
+                <p class="sub-text">Shipping</p>
+                <p>10$</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="divider-light-down-alt d-dark-none"></div>
+    <div class="divider-dark-down-up d-none d-dark-block"></div>
+  </div>
+  <footer class = "footer py-5 " style="background-color: var(--light-color);">
     <div class="container">
       <div class="row">
         <div class="col-md-4 info">
@@ -134,4 +177,6 @@
   <script src="scripts/dist/all.min.js"></script>
   <script src="modules/aos/aos.js"></script>
   <!-- scripts -->
+  <script src="scripts/dist/base.js"></script>
+  <script src="scripts/dist/cart.js"></script>
 </html>
