@@ -75,18 +75,35 @@
     <div class="container">
         <div class="cart-container col-sm-10 col-md-8 col-lg-6" id="cart">
           <div class="cart-iterface">
-            <div class="items">
+            <h4 style="text-align: center; border-color: transparent;">My Products</h4>
+            <div class="items" style="border-color: transparent;">
               <div class="item">
                   <div class="product-img "><img src="images/products/product/0.webp" alt=""></div>
                   <div class="info">
                     <h4>Nike Air Jordon 1 High Fly</h4>
                     <p class="sub-text">36 EU - 4US</p>
+                    <p class="sub-text">300$</p>
                   </div>
                   <div class="wrapper ">
-                    <div class="price">$300</div>
                     <div class="counter">
                       <btn  class="counter-item">-</btn>
-                      <input class="counter-item" contenteditable="true" type="number" value="01">
+                      <p class="counter-item">01</p>
+                      <btn class="counter-item">+</btn>
+                    </div>
+                  </div>
+              </div>
+              <div class="item">
+                  <div class="product-img "><img src="images/products/product/3.webp" alt=""></div>
+                  <div class="info">
+                    <h4>Nike Air Jordon 2 Low Fly</h4>
+                    <p class="sub-text">36 EU - 4US</p>
+                    <p class="sub-text">280$</p>
+                  </div>
+                  <div class="wrapper ">
+                    <!-- <div class="price">$280</div> -->
+                    <div class="counter">
+                      <btn  class="counter-item">-</btn>
+                      <p class="counter-item">01</p>
                       <btn class="counter-item">+</btn>
                     </div>
                   </div>
@@ -99,12 +116,22 @@
               </div>
               <div class="subtotal d-flex justify-content-between">
                 <p class="sub-text">Subtotal</p>
-                <p>600$</p>
+                <p><span class="subtotal-price">0</span>$</p>
               </div>
               <div class="shipping d-flex justify-content-between">
                 <p class="sub-text">Shipping</p>
-                <p>10$</p>
+                <p><span class="shipping-price">0</span>$</p>
               </div>
+            </div>
+            <div class="invoice d-flex flex-column gap-3">
+              <div class="subtotal d-flex justify-content-between">
+                <p class=>Total</p>
+                <p><span class="total-price">0</span>$</p>
+              </div>
+            </div>
+
+            <div class="order">
+              <button class="btn-main w-100"> Place Order (<span class="total-price">0</span>$)</button>
             </div>
           </div>
         </div>

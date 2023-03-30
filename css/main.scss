@@ -1422,11 +1422,23 @@ footer{
       flex-direction: column;
       gap: 0.5rem;
       .items .item{
+        position: relative;
         display: flex;
         justify-content: space-between;
         flex-wrap: nowrap;
         gap: 1rem;
         height: 120px;
+        padding-top: 0.5rem;
+        &:not(:first-child)::before{
+          position: absolute;
+          content: '';
+          width: 50%;
+          height: 1px ;
+          background-color: $text-gray;
+          border-radius: 1px;
+          top: 0;
+          left: 25%;
+        }
         .product-img{
           width: 100px;
           min-width: 80px;
@@ -1461,7 +1473,7 @@ footer{
           display: flex;
           flex-direction: column;
           align-items: center;
-          justify-content: space-between;
+          justify-content: center;
           .counter{
             width: fit-content;
             text-align: center;
@@ -1470,20 +1482,19 @@ footer{
             display: flex;
             justify-content: space-between;
             overflow: hidden;
-          font-size: clamp(1rem,2.8vw, 1.35rem);
+            font-size: clamp(1rem,2.8vw, 1.35rem);
             .counter-item{
               padding: 0 0.4em;
               background-color: transparent;
-              max-width: 2em;
               border-radius: 0;
               &:focus{
                 border-color: transparent;
               }
               &:not(:last-child){
                 border-right: 1px solid $text-color;
-                cursor: pointer;
               }
               &:not(:nth-child(2)){
+                cursor: pointer;
                 &:hover{
                   background-color: var(--action-color);
                   color: white;
@@ -1492,6 +1503,9 @@ footer{
             }
           }
         }
+      }
+      .invoice{
+        font-size: 1.2rem
       }
       &>div:not(:first-child){
         padding-top: 1rem;

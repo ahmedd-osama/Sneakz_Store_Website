@@ -1409,11 +1409,23 @@ footer .link a {
   gap: 0.5rem;
 }
 .cart.section.page #cart .cart-iterface .items .item {
+  position: relative;
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
   gap: 1rem;
   height: 120px;
+  padding-top: 0.5rem;
+}
+.cart.section.page #cart .cart-iterface .items .item:not(:first-child)::before {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 1px;
+  background-color: #808080;
+  border-radius: 1px;
+  top: 0;
+  left: 25%;
 }
 .cart.section.page #cart .cart-iterface .items .item .product-img {
   width: 100px;
@@ -1447,7 +1459,7 @@ footer .link a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 .cart.section.page #cart .cart-iterface .items .item .wrapper .counter {
   width: -moz-fit-content;
@@ -1463,7 +1475,6 @@ footer .link a {
 .cart.section.page #cart .cart-iterface .items .item .wrapper .counter .counter-item {
   padding: 0 0.4em;
   background-color: transparent;
-  max-width: 2em;
   border-radius: 0;
 }
 .cart.section.page #cart .cart-iterface .items .item .wrapper .counter .counter-item:focus {
@@ -1471,11 +1482,16 @@ footer .link a {
 }
 .cart.section.page #cart .cart-iterface .items .item .wrapper .counter .counter-item:not(:last-child) {
   border-right: 1px solid var(--text-black-white);
+}
+.cart.section.page #cart .cart-iterface .items .item .wrapper .counter .counter-item:not(:nth-child(2)) {
   cursor: pointer;
 }
 .cart.section.page #cart .cart-iterface .items .item .wrapper .counter .counter-item:not(:nth-child(2)):hover {
   background-color: var(--action-color);
   color: white;
+}
+.cart.section.page #cart .cart-iterface .invoice {
+  font-size: 1.2rem;
 }
 .cart.section.page #cart .cart-iterface > div:not(:first-child) {
   padding-top: 1rem;
