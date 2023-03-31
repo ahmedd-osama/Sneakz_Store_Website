@@ -70,7 +70,10 @@ window.addEventListener('load', navbarlinksActive);
 document.addEventListener('scroll', navbarlinksActive);
 
 
-// store page
+
+// filters
+  classTogglerGroup(document.querySelectorAll('.optional-filters .sort .dropdown .dropdown-item'),'active', 'click')
+// store 
 let products = document.querySelectorAll(".store .products-container .product");
 if (document.querySelector(".store .products-container")) {
   let portfolioFilters = Array.from(document.querySelectorAll('#products-filters li button'));
@@ -115,7 +118,7 @@ if (document.querySelector(".store .products-container")) {
     //   }));
   }, true);
 
-  // arranging functin
+  // calling the arranging functin
   function arrangeProducts(isotopeElement:any, activeFilter: string, userOptionalRemoveFilter: string = '.filtered-out'){
   let productsContainer: any = document.querySelector(".store .products-container");
   activeFilter = activeFilter.replace(' ', '')
@@ -176,18 +179,20 @@ if (document.querySelector(".store .products-container")) {
     filter: finalSelector,
     console: console.log("filtering")
   })
+  let activeSortType = document.querySelector(".optional-filters .sort .dropdown .dropdown-item.active")?.getAttribute('data-sort')
+  sortByPrice(activeSortType)
 }
 arrangeProducts(productsIsotope, '*')
 
   // sorting by price
-  function sortByPrice(direction:String = 'ascending'){
-    if(direction.replace(' ', '') == 'ascending'){
+  function sortByPrice(direction:String | null | undefined){
+    if(direction?.replace(' ', '') == 'ascending'){
       productsIsotope.arrange({
         sortAscending: true,
         sortBy: 'price',
       })
       productsIsotope.layout()
-    }else{
+    }else if(direction?.replace(' ', '') == 'descending'){
       productsIsotope.arrange({
         sortBy: 'price',
         sortAscending: false,

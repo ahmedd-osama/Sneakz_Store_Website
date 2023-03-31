@@ -9,10 +9,12 @@
     <link rel="stylesheet" href="css/fontawesome/all.min.css">
     <link rel="stylesheet" href="css/normalize/normalize.css">
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- packages -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="modules/aos/aos.css">
     <!-- style -->
     <link rel="stylesheet" href="css/main.css">
-    <!-- packages -->
-    <link rel="stylesheet" href="modules/aos/aos.css">
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,16 +33,16 @@
             </div>
             <ul>
               <li class="nav-item">
-                <a href="#Landing" >Home</a>
+                <a href="index.html" >Home</a>
               </li>
               <li class="nav-item">
-                <a href="#about" >About Us</a>
+                <a href="index.html#about" >About Us</a>
               </li>
               <li class="nav-item">
-                <a href="#store" >Store</a>
+                <a href="index.html#store" >Store</a>
               </li>
               <li class="nav-item">
-                <a href="#contact" >Contact</a>
+                <a href="index.html#contact" >Contact</a>
               </li>
               <li class="nav-btn ms-lg-auto">
                 <a href="join.html" class="btn-action" >Join</a>
@@ -74,64 +76,148 @@
     </div>
     <div class="container">
         <div class="cart-container col-sm-10 col-md-8 col-lg-6" id="cart">
-          <div class="cart-iterface">
-            <h4 style="text-align: center; border-color: transparent;">My Products</h4>
-            <div class="items" style="border-color: transparent;">
-              <div class="item">
-                  <div class="product-img "><img src="images/products/product/0.webp" alt=""></div>
-                  <div class="info">
-                    <h4>Nike Air Jordon 1 High Fly</h4>
-                    <p class="sub-text">36 EU - 4US</p>
-                    <p class="sub-text">300$</p>
+          <div class="cart-swiper ">
+            <div class="swiper-wrapper ">
+              <div class="cart-iterface swiper-slide show-cart-slide">
+                <h4 style="text-align: center; border-color: transparent;">My Products</h4>
+                <div class="items" style="border-color: transparent;">
+                
+                  <!-- Items will be appendid programatically here  -->
+                
+                </div>
+                <div class="invoice invoice-details d-flex flex-column gap-3">
+                  <div class="copun-input d-flex gap-2 fs-6">
+                    <input type="text" placeholder="Enter Coupon Code" style="flex-grow: 1;">
+                    <button class="btn-action">Apply</button>
                   </div>
-                  <div class="wrapper ">
-                    <div class="counter">
-                      <btn  class="counter-item">-</btn>
-                      <p class="counter-item">01</p>
-                      <btn class="counter-item">+</btn>
-                    </div>
+                  <div class="subtotal d-flex invoice-item">
+                    <p class="sub-text">Subtotal</p>
+                    <p><span class="subtotal-price">0</span>$</p>
                   </div>
-              </div>
-              <div class="item">
-                  <div class="product-img "><img src="images/products/product/3.webp" alt=""></div>
-                  <div class="info">
-                    <h4>Nike Air Jordon 2 Low Fly</h4>
-                    <p class="sub-text">36 EU - 4US</p>
-                    <p class="sub-text">280$</p>
+                </div>
+                <div class="invoice gap-3">
+                  <div class="subtotal d-flex invoice-item">
+                    <p class="">Total</p>
+                    <p><span class="total-price ">0</span>$</p>
                   </div>
-                  <div class="wrapper ">
-                    <!-- <div class="price">$280</div> -->
-                    <div class="counter">
-                      <btn  class="counter-item">-</btn>
-                      <p class="counter-item">01</p>
-                      <btn class="counter-item">+</btn>
-                    </div>
-                  </div>
-              </div>
-            </div>
-            <div class="invoice d-flex flex-column gap-3">
-              <div class="copun-input d-flex gap-2 fs-6">
-                <input type="text" placeholder="Enter Coupon Code" style="flex-grow: 1;">
-                <button class="btn-action">Apply</button>
-              </div>
-              <div class="subtotal d-flex justify-content-between">
-                <p class="sub-text">Subtotal</p>
-                <p><span class="subtotal-price">0</span>$</p>
-              </div>
-              <div class="shipping d-flex justify-content-between">
-                <p class="sub-text">Shipping</p>
-                <p><span class="shipping-price">0</span>$</p>
-              </div>
-            </div>
-            <div class="invoice d-flex flex-column gap-3">
-              <div class="subtotal d-flex justify-content-between">
-                <p class=>Total</p>
-                <p><span class="total-price">0</span>$</p>
-              </div>
-            </div>
+                </div>
 
-            <div class="order">
-              <button class="btn-main w-100"> Place Order (<span class="total-price">0</span>$)</button>
+                <div class="order">
+                  <button class="btn-main w-100 next-sec-btn"> Place Order (<span class="total-price">0</span>$)</button>
+                </div>
+              </div>
+              <div class="shipping-details swiper-slide">
+                <h4 style="text-align: center; border-color: transparent;">Shipping Details</h4>
+
+                <form >
+                  <div class="row name">
+                    <h5 class=""> <i class="bi bi-person"></i> Name</h5>
+                    <div class="col-6 d-flex flex-column">
+                      <label for="shipping-first-name">  First Name:</label>
+                      <input type="text" id ="shipping-first-name" placeholder="First Name">
+                    </div>
+                    <div class="col-6 d-flex flex-column">
+                      <label for="shipping-last-name">last Name:</label>
+                      <input type="text" id ="shipping-last-name" placeholder="Last Name">
+                    </div>
+                  </div>
+                  <div class="contact-info d-flex flex-column row ">
+                    <h5 class=""> <i class="bi bi-envelope"></i> Contact Info</h5>
+                    <div class="col-sm-8 d-flex flex-column mt-2">
+                      <label for="shipping-email">Email</label>
+                      <input class = "" type="text" id ="shipping-email" placeholder="e.g example@sneakz.com">
+                    </div>
+                    <div class="col-sm-8 d-flex flex-column mt-2">
+                      <label for="shipping-Phone-Number">Phone Number</label>
+                      <input class = "" type="text" id ="shipping-Phone-Number" placeholder="e.g +12 1023 3005 033">
+                    </div>
+                  </div>
+                  <div class="shipping-adress d-flex flex-column row ">
+                    <h5 class=""> <i class="bi bi-truck"></i> Shipping Adress</h5>
+                    <div class=" d-flex flex-column mt-2">
+                      <label for="shipping-Adress">Adress</label>
+                      <input class = "" type="text" id ="shipping-adress" placeholder="Your adress in details">
+                    </div>
+                    <div class="row">
+                      <div class="col-6 mt-2 d-flex flex-column w-50">
+                        <label for="shipping-city" class="form-lable">city</label>
+                        <input class = "" type="text" id ="shipping-city" placeholder="City Name">
+                      </div>
+                      <div class="col-6 mt-2 d-flex flex-column w-50">
+                        <label for="shipping-State" class="form-lable">State/Province</label>
+                        <input class = "" type="text" id ="shipping-State" placeholder="State/Province">
+                      </div>
+                      <div class="col-6 mt-2 d-flex flex-column w-50">
+                        <label for="shipping-zip" class="form-lable">Zipcode</label>
+                        <input class = "" type="text" id ="shipping-zip" placeholder="Zipcode">
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <div class="cart-navigation py-2 d-flex justify-content-between align-items-center">
+                  <a class="sub-text prev-sec-btn"><i class="bi bi-arrow-left"></i> Go Back</a>
+                  <button class="btn-action next-sec-btn">Checkout</button>
+                </div>
+              </div>
+              <div class="payment swiper-slide">
+                <h4 style="text-align: center; border-color: transparent;" class="mt-2">Checkout</h4>
+                <h6 class="mt-3">Please Choode Your Desired Payment Method:</h6>
+                <div class=" payment-methods row ">
+                  <div class="col-6 col-md-3 mt-3 ">
+                    <div class="payment-method active">
+                      <img src="svg/payment/visa.svg" alt="Payment Method">
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-3 mt-3">
+                    <div class="payment-method">
+                      <img src="svg/payment/paypal.svg" alt="Payment Method">
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-3 mt-3">
+                    <div class="payment-method">
+                      <img src="svg/payment/mastercard.svg" alt="Payment Method">
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-3 mt-3">
+                    <div class="payment-method">
+                      <img src="svg/payment/google-pay.svg" alt="Payment Method">
+                    </div>
+                  </div>
+                </div>
+                <form >
+                  <div class="row payment">
+                    <div class="col-6 d-flex flex-column mt-2">
+                      <label for="payment-first-name">  First Name:</label>
+                      <input type="text" id ="payment-first-name" placeholder="First Name">
+                    </div>
+                    <div class="col-6 d-flex flex-column mt-2">
+                      <label for="payment-last-name">last Name:</label>
+                      <input type="text" id ="payment-last-name" placeholder="Last Name">
+                    </div>
+                    <div class="col-6 d-flex flex-column mt-2">
+                      <label for="payment-card-number">Card Numbber</label>
+                      <input type="text" id ="payment-card-number" placeholder="16 digits">
+                    </div>
+                    <div class="col-6 d-flex flex-column mt-2">
+                      <label for="payment-cvc">Security Code</label>
+                      <input type="text" id ="payment-cvc" placeholder="CVC">
+                    </div>
+                    <div class="col-6 d-flex flex-column mt-2">
+                      <label for="payment-expiary-date">Card Expiration</label>
+                      <input type="text" id ="payment-expiary-date" placeholder="MM/YY">
+                    </div>
+                  </div>
+                </form>
+                <div class="cart-navigation py-2 d-flex justify-content-between align-items-center">
+                  <a class="sub-text prev-sec-btn"><i class="bi bi-arrow-left"></i> Go Back</a>
+                  <button class="btn-action next-sec-btn">Confirm (<span class="total-price"></span>$)</button>
+                </div>
+              </div>
+              <div class=" swiper-slide sucess-message d-flex flex-column align-items-center justify-content-center py-5" style="height: 50%;">
+                <img src="svg/icon-thank-you.svg" style="width: 35%;" alt="">
+                <h4 class="mt-4 text-center">Your Order Has Been Submitted Succesfully!</h4>
+                <a href = "store.html"class="mt-4 btn-action" width = "250px"><i class="bi bi-bag-heart-fill"></i> Continue Shopping</a>
+              </div>
             </div>
           </div>
         </div>
@@ -160,10 +246,10 @@
             <div class="links">
               <h4>links</h4>
               <ul>
-                <li><i class="fa-solid fa-chevron-right"></i> <a href="#"> Home</a></li>
-                <li><i class="fa-solid fa-chevron-right"></i> <a href="#about"> About Us</a></li>
-                <li><i class="fa-solid fa-chevron-right"></i> <a href="#store"> Store</a></li>
-                <li><i class="fa-solid fa-chevron-right"></i> <a href="#contact"> Contact</a></li>
+                <li><i class="fa-solid fa-chevron-right"></i> <a href="index.html"> Home</a></li>
+                <li><i class="fa-solid fa-chevron-right"></i> <a href="index.html#about"> About Us</a></li>
+                <li><i class="fa-solid fa-chevron-right"></i> <a href="index.html#store"> Store</a></li>
+                <li><i class="fa-solid fa-chevron-right"></i> <a href="index.html#contact"> Contact</a></li>
               </ul>
             </div>
             <div class="links">
@@ -203,6 +289,7 @@
   <script src="scripts/dist/bootstrap.bundle.min.js"></script>
   <script src="scripts/dist/all.min.js"></script>
   <script src="modules/aos/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <!-- scripts -->
   <script src="scripts/dist/base.js"></script>
   <script src="scripts/dist/cart.js"></script>

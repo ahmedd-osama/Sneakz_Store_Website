@@ -664,7 +664,7 @@ nav.expanded .bar ul a {
   margin-top: 0.85rem;
 }
 .store #products-filters li button {
-  border: 1px solid var(--black-white-color);
+  border: lid text solid var(--black-white-color);
   color: var(--text-black-white);
   text-transform: capitalize;
   border-radius: 0.5em;
@@ -1347,12 +1347,11 @@ footer .link a {
 .store.page .filters .optional-filters .option-filter.price-range .price-container {
   display: flex;
   justify-content: space-between;
-  padding: 0 0.4em;
 }
 .store.page .filters .optional-filters .option-filter.price-range .price-container .price-box {
   color: white;
   padding: 0.2em 0.6em;
-  border: 1px solid var(--text-black-white);
+  border: lid text solid var(--text-black-white);
   border-radius: 0.5em;
   background-color: rgb(88, 88, 88);
 }
@@ -1364,7 +1363,7 @@ footer .link a {
   background-color: var(--light-color-alt);
   padding: 0 10% 0 15%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 .store.page .filters .optional-filters .option-filter.price-range .slider .dot {
@@ -1402,6 +1401,7 @@ footer .link a {
   margin-top: 1rem;
   border: 1px solid var(--main-color);
   border-radius: 0.5rem;
+  overflow: hidden;
 }
 .cart.section.page #cart .cart-iterface {
   display: flex;
@@ -1417,13 +1417,35 @@ footer .link a {
   height: 120px;
   padding-top: 0.5rem;
 }
+.cart.section.page #cart .cart-iterface .items .item .remove-btn {
+  color: #808080;
+  font-size: 0.875rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 0;
+  cursor: pointer;
+  overflow: hidden;
+  text-decoration: underline;
+}
+.cart.section.page #cart .cart-iterface .items .item .remove-btn svg {
+  width: 0.875em;
+  height: 0.875em;
+  transition: transform 500ms ease;
+  transform: translateY(150%);
+}
+.cart.section.page #cart .cart-iterface .items .item .remove-btn:hover {
+  color: var(--text-black-white);
+}
+.cart.section.page #cart .cart-iterface .items .item .remove-btn:hover svg {
+  transform: translateY(0);
+}
 .cart.section.page #cart .cart-iterface .items .item:not(:first-child)::before {
   position: absolute;
   content: "";
   width: 50%;
-  height: 1px;
+  height: lid text;
   background-color: #808080;
-  border-radius: 1px;
+  border-radius: lid text;
   top: 0;
   left: 25%;
 }
@@ -1454,7 +1476,6 @@ footer .link a {
 }
 .cart.section.page #cart .cart-iterface .items .item .wrapper {
   padding: 0.5em;
-  width: 25%;
   font-size: clamp(1.6rem, 4.8vw, 1.8rem);
   display: flex;
   flex-direction: column;
@@ -1493,10 +1514,51 @@ footer .link a {
 .cart.section.page #cart .cart-iterface .invoice {
   font-size: 1.2rem;
 }
+.cart.section.page #cart .cart-iterface .invoice .invoice-item {
+  display: flex;
+  justify-content: space-between;
+}
 .cart.section.page #cart .cart-iterface > div:not(:first-child) {
   padding-top: 1rem;
   padding-bottom: 1rem;
   border-top: 1px solid #808080;
+}
+.cart.section.page #cart .payment .payment-methods .payment-method {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  border: 1px solid var(--text-black-white);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.cart.section.page #cart .payment .payment-methods .payment-method.active {
+  border-color: var(--action-color);
+  border-width: 2px;
+}
+.cart.section.page #cart .payment .payment-methods .payment-method img {
+  width: 65%;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.cart.section.page #cart .cart-navigation .prev-sec-btn {
+  overflow: hidden;
+  cursor: pointer;
+}
+.cart.section.page #cart .cart-navigation .prev-sec-btn i::before {
+  transform: translateY(200%);
+  transition: transform 500ms;
+}
+.cart.section.page #cart .cart-navigation .prev-sec-btn:hover {
+  color: var(--text-black-white);
+}
+.cart.section.page #cart .cart-navigation .prev-sec-btn:hover i::before {
+  transform: translateY(0);
 }
 
 @keyframes modal-bg {

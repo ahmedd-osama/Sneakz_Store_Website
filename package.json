@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/ahmedd-osama/Sneakz_Store_Website#readme",
   "dependencies": {
-    "aos": "^2.3.4"
+    "aos": "^2.3.4",
+    "bootstrap-icons": "^1.10.3"
   }
 }

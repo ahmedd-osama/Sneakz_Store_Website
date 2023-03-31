@@ -666,7 +666,7 @@ nav{
   #products-filters{
     margin-top: 0.85rem;
     li button{
-      border: 1px solid $black-white-color;
+      border: lid text solid $black-white-color;
       color: $text-color;
       text-transform: capitalize;
       border-radius: 0.5em;
@@ -1359,11 +1359,10 @@ footer{
           .price-container{
             display: flex;
             justify-content: space-between;
-            padding: 0 0.4em;
             .price-box{
               color: white;
               padding: 0.2em 0.6em;
-              border: 1px solid $text-color;
+              border: lid text solid $text-color;
               border-radius: 0.5em;
               background-color: rgb(88, 88, 88);
             }
@@ -1376,7 +1375,7 @@ footer{
             background-color: $light-color-alt;
             padding: 0 10% 0 15%;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             .dot{
               background-color: $main-color;
@@ -1417,6 +1416,7 @@ footer{
     margin-top: 1rem;
     border: 1px solid $main-color;
     border-radius: 0.5rem;
+    overflow: hidden;
     .cart-iterface{
       display: flex;
       flex-direction: column;
@@ -1429,13 +1429,37 @@ footer{
         gap: 1rem;
         height: 120px;
         padding-top: 0.5rem;
+        .remove-btn{
+          color: $text-gray;
+          font-size: .875rem;
+          position: absolute;
+          top: 0.5rem;
+          right: 0;
+          cursor: pointer; 
+          overflow: hidden;
+          // border-bottom: lid text solid $gray-color;
+          text-decoration: underline;
+          svg{ 
+            width: 0.875em;
+            height: 0.875em;
+            transition: transform 500ms ease;
+            transform: translateY(150%);
+            // margin-left: 0.125em;
+          }
+          &:hover {
+            color: $text-color;
+          } 
+          &:hover svg{
+            transform: translateY(0);
+          } 
+        }
         &:not(:first-child)::before{
           position: absolute;
           content: '';
           width: 50%;
-          height: 1px ;
+          height: lid text ;
           background-color: $text-gray;
-          border-radius: 1px;
+          border-radius: lid text;
           top: 0;
           left: 25%;
         }
@@ -1467,7 +1491,6 @@ footer{
         }
         .wrapper{
           padding: 0.5em;
-          width: 25%;
           // font-size: 1.25rem;
           font-size: clamp(1.6rem,4.8vw, 1.8rem);
           display: flex;
@@ -1505,12 +1528,55 @@ footer{
         }
       }
       .invoice{
-        font-size: 1.2rem
+        font-size: 1.2rem;
+        .invoice-item{
+          display: flex;
+          justify-content: space-between;
+        }
       }
       &>div:not(:first-child){
         padding-top: 1rem;
         padding-bottom: 1rem ;
         border-top: 1px solid $text-gray
+      }
+    }
+    .payment{
+      .payment-methods .payment-method{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        margin-top: 0.5rem;
+        border: 1px solid $text-color;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        &.active{
+          border-color: $action-color;
+          border-width: 2px;
+        }
+        img{
+          width: 65%;
+          pointer-events: none;
+          user-select: none;
+        }
+      }
+    }
+    .cart-navigation{
+      .prev-sec-btn{
+        overflow: hidden;
+        cursor: pointer;
+        i::before{
+          transform: translateY(200%);
+          transition: transform 500ms;
+        }
+        &:hover {
+          color: $text-color;
+        }
+        &:hover i::before{
+          transform: translateY(0);
+        }
       }
     }
   }

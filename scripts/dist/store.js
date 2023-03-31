@@ -75,7 +75,9 @@ const navbarlinksActive = () => {
 };
 window.addEventListener('load', navbarlinksActive);
 document.addEventListener('scroll', navbarlinksActive);
-// store page
+// filters
+classTogglerGroup(document.querySelectorAll('.optional-filters .sort .dropdown .dropdown-item'), 'active', 'click');
+// store 
 let products = document.querySelectorAll(".store .products-container .product");
 if (document.querySelector(".store .products-container")) {
     let portfolioFilters = Array.from(document.querySelectorAll('#products-filters li button'));
@@ -114,8 +116,9 @@ if (document.querySelector(".store .products-container")) {
         //     console: console.log('wh')
         //   }));
     }, true);
-    // arranging functin
+    // calling the arranging functin
     function arrangeProducts(isotopeElement, activeFilter, userOptionalRemoveFilter = '.filtered-out') {
+        var _a;
         let productsContainer = document.querySelector(".store .products-container");
         activeFilter = activeFilter.replace(' ', '');
         let optionalRemoveFilter = userOptionalRemoveFilter;
@@ -173,18 +176,20 @@ if (document.querySelector(".store .products-container")) {
             filter: finalSelector,
             console: console.log("filtering")
         });
+        let activeSortType = (_a = document.querySelector(".optional-filters .sort .dropdown .dropdown-item.active")) === null || _a === void 0 ? void 0 : _a.getAttribute('data-sort');
+        sortByPrice(activeSortType);
     }
     arrangeProducts(productsIsotope, '*');
     // sorting by price
-    function sortByPrice(direction = 'ascending') {
-        if (direction.replace(' ', '') == 'ascending') {
+    function sortByPrice(direction) {
+        if ((direction === null || direction === void 0 ? void 0 : direction.replace(' ', '')) == 'ascending') {
             productsIsotope.arrange({
                 sortAscending: true,
                 sortBy: 'price',
             });
             productsIsotope.layout();
         }
-        else {
+        else if ((direction === null || direction === void 0 ? void 0 : direction.replace(' ', '')) == 'descending') {
             productsIsotope.arrange({
                 sortBy: 'price',
                 sortAscending: false,
