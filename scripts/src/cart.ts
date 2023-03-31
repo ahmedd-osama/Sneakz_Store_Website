@@ -146,6 +146,7 @@ select('.prev-sec-btn', true)?.forEach((btn: any)=>{
     cartSwiper.slidePrev();
   });
 });
+// updating the height of the cart container according to the height of the active slide 
 cartSwiper.on('slideChange', ()=>{
   let cart: any = document.querySelector('#cart');
   cart.style.height = `${Math.round(cartSwiper.slides[cartSwiper.activeIndex].getBoundingClientRect().height) + 50}px`;

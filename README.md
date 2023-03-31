@@ -1,48 +1,38 @@
 
 
-# Project Name
+# Sneakz Store Website
 
-Intro About the project.
+Live Demo: https://sneakzz.netlify.app/
+
+A fully responsive and interactive E-commerse sneakers store website made utilizing Vanilla JS, HTML5, CSS,Bootstrap 5, and Different js Liberaries.
 
 ## Table of contents
 
 - [Overview](#overview)
-  - [General](#general)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [Useful resources](#useful-resources)
 - [Author](#author)   
 
 ## Overview
-
+  A fully responsive and interactive Demo Website made by [Ahmed Osama](https://www.https://github.com/ahmedd-osama)
 ### General
 
-### Screenshot
-
-### Links
-
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
-
-## My process
+- Live Site URL: [Add live site URL here](https://sneakzz.netlify.app/)
 
 ### Built with
 
 - Bootstrap 5
 - Semantic HTML5 markup   
-- CSS custom properties   
-- CSS responsive design
-- Flexbox   
+- CSS responsive Layout
 - JavaScript DOM manibulation   
-- JavaScript Event listeners (mouseover, mouseout, click)
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [Bootstrap 5](https://getbootstrap.com/) - Toolkit
+- [Swiper.js](https://swiperjs.com/) - JS library
+- [Isotope.js](https://isotope.metafizzy.co/) - JS library
+- [AOS](https://michalsnik.github.io/aos/) - Js library
+- [GLightBox](https://www.freepik.com/) - Js library
+- [PureCounter.js](https://www.cssscript.com/scroll-triggered-counter/) - Js library
+- [FontAwesome](https://fontawesome.com/icons) - Icons/SVGs Liberary
+- [Freepik](https://www.freepik.com/) - Visual Assets Liberary
 
 ## Author
 
